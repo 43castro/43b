@@ -1,0 +1,37 @@
+---
+---
+
+
+<html lang="es" class="">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>hershel</title>
+  </head>
+    <slot />
+</html>
+
+<style is:global>
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #1A1A1A;
+  --background-color-dark: #1A1A1A;
+  --text-color-dark: #ffffff;
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+}
+
+</style>
