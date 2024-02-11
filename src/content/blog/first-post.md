@@ -1,8 +1,8 @@
 ---
-title: 'First Post'
+title: 'Zelda: Simply, a work of art'
 description: 'A guide to the ultimate server'
-date: 2022-07-08
-image: '/blog-placeholder-3.jpg'
+date: 2024-02-08
+image: '/zelda.webp'
 tags: ["blog", "astro"]
 ---
 
