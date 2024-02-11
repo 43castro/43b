@@ -7,7 +7,7 @@ const allPosts = await getCollection("blog");
 
 <Main>
 	<body>
-		<div class="mt-36 mb-10">
+		<div class="h-full mt-36 mb-10">
 			{allPosts.map((p) => <ArticleCard blog={p}/>)}
 		</div>
 	</body>

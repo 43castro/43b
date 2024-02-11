@@ -7,7 +7,7 @@ const { blog } = Astro.props;
 const { title, date } = blog.data;
 ---
 
-<div class="bg-cover bg-center flex w-1/2 h-96 mx-auto mt-10 rounded-xl relative" style={{ backgroundImage: `url(${blog.data.image})`, backgroundSize: 'cover' }}>
+<div class="bg-cover bg-center flex w-1/3 h-96 mx-auto mt-10 rounded-xl relative" style={{ backgroundImage: `url(${blog.data.image})`, backgroundSize: 'cover' }}>
     <div class="absolute justify-between flex w-full px-8 bottom-6 text-2xl font-bold">
         <a href={`/blog/${blog.slug}`} class="text-xl hover:underline underline-offset-4">{title}</a>
         <time class="font-extralight opacity-80" datetime={date.toISOString()}>{date.toLocaleDateString(undefined, {
