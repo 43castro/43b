@@ -5,7 +5,7 @@ import { z, defineCollection } from 'astro:content';
 const blogCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
-  title: z.string(),
+    title: z.string(),
 	description: z.string().max(160, {message: "Description should be less than 160 characters."}),
 	date: z.date(),
 	image: z.string().optional(),

@@ -5,7 +5,6 @@ const currentSlug = params.slug;
 console.log(`${currentSlug}`);
 const entry = await getEntry('blog', currentSlug);
 const { headings } = await entry.render();
-
 ---
 
 <div class="sm:hidden md:hidden lg:hidden xl:flex flex-col gap-3 mt-10 max-w-40">
