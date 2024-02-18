@@ -4,13 +4,12 @@ import Main from "../layouts/Main.astro"
 ---
 
 <Main>
-    <Nav></Nav>
         <!DOCTYPE html>
         <html lang="en">
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Grid Layout</title>
+          <title></title>
           <style>
             .grid-container {
               display: grid;
@@ -28,7 +27,7 @@ import Main from "../layouts/Main.astro"
             .block1 {
               grid-column: span 2;
               grid-row: span 2;
-              padding: 70px;
+              padding: 80px;
               font-size: 40px;
               font-weight: bold;
             }
@@ -104,21 +103,41 @@ import Main from "../layouts/Main.astro"
             font-size: 40px;
             }
 
+            .links{ 
+            background-color: #252525;
+            border-radius: 20px;
+            padding: 70px;
+            font-size: 23px;
+            }
+
+            #changeText { 
+              color: white;
+            }
+
+            .block:hover ~ #changeText {
+              color: red; 
+            }
+
+
           </style>
         </head>
         <body>
         <div class="h-full w-1/2 mx-auto px-6 mt-36 space-y-5">
-          <div class="info">I build stuff. Dig into things I like and have fun. I value design, simplicity, perfomance and interest. Everything I make is free & open-source. </div>
+          <div class="info">Me gusta construir cosas y profundizo en los temas que me gustan. Valoro el diseño, la sencillez, el rendimiento y el interés. Todo lo que hago es gratuito y de código abierto. </div>
           <div class="grid-container">
-            <div class="block block1">Aprendiendo y pasándolo bien con
-                <div id="changeText">todo.</div>
+            <div class="block block1">Aprendiendo y explorando con
+                <div id="changeText" class="">todo.</div>
             </div>
-            <div class="block block2 hover-text" onmouseover="changeText('Resolve.')" onmouseout="resetText()"><img class="icon" src="/resolve.png" alt=""></div>
-            <div class="block block3 hover-text" onmouseover="changeText('Final Cut Pro.')"><img class="icon" src="/finalcut.png" alt=""></div>
-            <div class="block block4 hover-text" onmouseover="changeText('VS Code.')" onmouseout="resetText()"><img class="icon" src="/vscode.png" alt=""></div>
-            <div class="block block5 hover-text" onmouseover="changeText('Photoshop.')" onmouseout="resetText()"><img class="icon" src="/photoshop.png" alt=""></div>
-            <div class="block block6 hover-text" onmouseover="changeText('Blender.')" onmouseout="resetText()"><img class="icon" src="/blender.png" alt=""></div>
-            <div class="block block7 hover-text" onmouseover="changeText('Logic Pro.')" onmouseout="resetText()"><img class="icon" src="/logic.png" alt=""></div>
+            <div id="resolve" class="block block2 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Resolve.', 'linear-gradient(to right, red, yellow)')" onmouseout="resetText()"><img class="icon" src="/resolve.png" alt=""></div>
+            <div class="block block3 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Final Cut Pro.')"><img class="icon" src="/finalcut.png" alt=""></div>
+            <div class="block block4 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('VS Code.')" onmouseout="resetText()"><img class="icon" src="/vscode.png" alt=""></div>
+            <div class="block block5 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Photoshop.')" onmouseout="resetText()"><img class="icon" src="/photoshop.png" alt=""></div>
+            <div class="block block6 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Blender.')" onmouseout="resetText()"><img class="icon" src="/blender.png" alt=""></div>
+            <div class="block block7 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Logic Pro.')" onmouseout="resetText()"><img class="icon" src="/logic.png" alt=""></div>
+          </div>
+          <div class="links flex justify-center gap-10">
+            <a class="flex ring-1 ring-white rounded-full px-6 py-2 gap-2"><svg class="mt-1" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 012 2v7"/><path d="M6 9v12"/></svg>Github</a>
+            <a class="flex ring-1 ring-white rounded-full px-6 py-2 gap-2"><svg class="mt-1.5" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><path fill="var(--geist-fill, currentColor)" stroke="none" d="M16.99 0H20.298L13.071 8.26L21.573 19.5H14.916L9.702 12.683L3.736 19.5H0.426L8.156 10.665L0 0H6.826L11.539 6.231L16.99 0ZM15.829 17.52H17.662L5.83 1.876H3.863L15.829 17.52Z"/></svg>Twitter</a>
           </div>
         </div>
         </body>
@@ -126,7 +145,8 @@ import Main from "../layouts/Main.astro"
     </div>
 
     <script lang="js">
-   function changeText(text) {
+
+function changeText(text, color) {
   document.getElementById('changeText').innerText = text;
 }
 function resetText() {
