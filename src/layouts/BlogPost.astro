@@ -1,6 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
-import TableOfContents from "../components/TableOfContents.astro"
+import TableOfContents from "../components/TableOfContents.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -11,82 +11,106 @@ const { frontmatter } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title}</title>
     <body class="bg-neutral-900 text-white">
-        <div class="bg-gradient-to-t from-transparent to-neutral-900 p-4 h-28 w-full fixed top-0 z-10"></div>
-        <main class="flex relative mx-auto overflow-hidden pt-32 pb-72 px-10 max-w-3xl min-h-screen">
-            <Nav></Nav>
-            <div style="transform: translate(-280px, 175px);" class="fixed top-0 px-10">
-                <TableOfContents></TableOfContents>
+        <div
+            class="fixed top-0 z-10 h-28 w-full bg-gradient-to-t from-transparent to-neutral-900 p-4"
+        >
+        </div>
+        <main
+            class="relative mx-auto flex min-h-screen max-w-3xl overflow-hidden px-10 pb-72 pt-32"
+        >
+            <Nav />
+            <div
+                style="transform: translate(-280px, 175px);"
+                class="fixed top-0 px-10"
+            >
+                <TableOfContents />
             </div>
             <div class="h-full w-full">
                 <div class="flex justify-between">
                     <div>
                         <div class="mb-2 font-bold">{frontmatter.title}</div>
-                        <div class="mb-10 font-extralight text-sm opacity-80">
-                        <time datetime={frontmatter.date.toISOString()}>{frontmatter.date.toLocaleDateString(undefined, {
-                            year: "numeric",
-                            month: "long",
-                            timeZone: "CET",
-                        })}</time> 
+                        <div class="mb-10 text-sm font-extralight opacity-80">
+                            <time datetime={frontmatter.date.toISOString()}
+                                >{
+                                    frontmatter.date.toLocaleDateString(
+                                        undefined,
+                                        {
+                                            year: "numeric",
+                                            month: "long",
+                                            timeZone: "CET",
+                                        },
+                                    )
+                                }</time
+                            >
                         </div>
                     </div>
                 </div>
-                <img src={frontmatter.image} alt="" class="rounded-lg shadow-lg mb-6">
+                <img
+                    src={frontmatter.image}
+                    alt=""
+                    class="mb-6 rounded-lg shadow-lg"
+                />
                 <main class="prose">
-                    <slot />  
-                </main> 
+                    <slot />
+                </main>
             </div>
         </main>
-    </body>	
+    </body>
 </html>
 
-
 <style is:global>
-
-
     .prose p + p {
-      margin-bottom: 55px;
+        margin-bottom: 55px;
     }
-  
-    .prose p{
-      line-height: 2em;
+
+    .prose p {
+        line-height: 2em;
     }
-    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
-      color: white;
-      font-weight: bold;
-      line-height: 3em;
-      font-size: large;
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4,
+    .prose h5 {
+        color: white;
+        font-weight: bold;
+        line-height: 3em;
+        font-size: large;
     }
-  
-    .prose p, .prose strong, .prose ol, .prose ul{
-      color: white;
+
+    .prose p,
+    .prose strong,
+    .prose ol,
+    .prose ul {
+        color: white;
     }
-  
-    .prose a{
-      font-weight: bold;
-      text-decoration: underline;
+
+    .prose a {
+        font-weight: bold;
+        text-decoration: underline;
     }
     .prose img {
-      border-radius: 0.5rem;
+        border-radius: 0.5rem;
     }
 
-    .prose code, .prose pre {
-      color: grey;
+    .prose code,
+    .prose pre {
+        color: grey;
     }
-  
+
     .astro-code {
-      color: orange;
+        color: orange;
     }
-  
+
     ::-webkit-scrollbar {
-      width: 0.75em;
+        width: 0.75em;
     }
-  
+
     ::-webkit-scrollbar-track {
-      background: #262626;
+        background: #262626;
     }
-  
+
     ::-webkit-scrollbar-thumb {
-      background: #525252;
-      border-radius: 10vh;
+        background: #525252;
+        border-radius: 10vh;
     }
-  </style>
+</style>
