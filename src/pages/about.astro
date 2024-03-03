@@ -112,6 +112,9 @@ import Main from "../layouts/Main.astro"
 
             #changeText { 
               color: white;
+              background: linear-gradient(to right, white, grey); /* Default gradient color */
+              -webkit-background-clip: text; /* Clip text to background */
+              -webkit-text-fill-color: transparent;
             }
 
             .block:hover ~ #changeText {
@@ -128,7 +131,7 @@ import Main from "../layouts/Main.astro"
             <div class="block block1">Aprendiendo y explorando con
                 <div id="changeText" class="">todo.</div>
             </div>
-            <div id="resolve" class="block block2 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Resolve.', 'linear-gradient(to right, red, yellow)')" onmouseout="resetText()"><img class="icon" src="/resolve.png" alt=""></div>
+            <div id="resolve" class="block block2 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Resolve.', 'linear-gradient(to right, red, orange)')" onmouseout="resetText()"><img class="icon" src="/resolve.png" alt=""></div>
             <div class="block block3 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Final Cut Pro.')"><img class="icon" src="/finalcut.png" alt=""></div>
             <div class="block block4 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('VS Code.')" onmouseout="resetText()"><img class="icon" src="/vscode.png" alt=""></div>
             <div class="block block5 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Photoshop.')" onmouseout="resetText()"><img class="icon" src="/photoshop.png" alt=""></div>
@@ -146,11 +149,13 @@ import Main from "../layouts/Main.astro"
 
     <script lang="js">
 
-function changeText(text, color) {
+function changeText(text, gradientColor) {
   document.getElementById('changeText').innerText = text;
+  document.getElementById('changeText').style.background = gradientColor;
 }
 function resetText() {
   document.getElementById('changeText').innerText = "todo.";
+  document.getElementById('changeText').style.background = "white";
 }
     </script>
 </Main>
