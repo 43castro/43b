@@ -9,7 +9,7 @@ const allPosts = await getCollection("blog");
 	<body class="">
 		<div class="h-full mt-20 mb-10">
 		<h1 class="text-2xl px-2 mb-10">Hi! Welcome to the blog!</h1>
-		<hr class="mb-10 mx-1.5 opacity-20">
+		<hr class="mb-10 mx-1.5 opacity-15">
 			{allPosts.map((p) => <ArticleCard blog={p}/>)}
 		</div>
 	</body>

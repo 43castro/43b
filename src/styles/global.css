@@ -4,50 +4,37 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+ :root {
+	--background-color-light: rgb(206, 205, 195);
+	--text-color-light: rgb(16, 15, 15);
+	--background-color-dark: rgb(16, 15, 15);
+	--text-color-dark: rgb(206, 205, 195);
+  }
+
 body {
-	font-family: 'Atkinson', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	font-family: 'Geist', sans-serif;
 	font-size: 20px;
 	line-height: 1.7;
+	background-color: var(--background-color-light);
+	color: var(--text-color-light);
+	font-family: Geist-SemiBold;
 }
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/Geist-Regular.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
+  
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--background-color-dark);
+		color: var(--text-color-dark);
+	}
+}
+
 h1,
 h2,
 h3,
@@ -151,4 +138,73 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+
+.prose p + p {
+	margin-bottom: 35px;
+	color: rgb(206, 205, 195);
+}
+
+.prose p {
+	color: rgb(206, 205, 195);
+	line-height: 1.5em;
+	font-size: 20px;
+	letter-spacing: 0.25px;
+}
+.prose h1{
+	color: rgb(206, 205, 195);
+	font-weight: bold;
+	line-height: 3em;
+	font-size: 23px;
+}
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+	color: rgb(206, 205, 195);
+	font-weight: bold;
+	line-height: 3em;
+	font-size: large;
+}
+
+.prose p,
+.prose strong,
+.prose ol,
+.prose ul {
+	color: rgb(206, 205, 195);
+}
+
+.prose a {
+	font-weight: regular;
+	text-decoration: underline;
+}
+
+.prose a:hover{
+	color: rgb(67, 133, 190);
+}
+.prose img {
+	border-radius: 0.5rem;
+}
+
+.prose code,
+.prose pre {
+	color: grey;
+}
+
+.astro-code {
+	color: orange;
+}
+
+::-webkit-scrollbar {
+	width: 0.75em;
+}
+
+::-webkit-scrollbar-track {
+	background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #525252;
+	border-radius: 10vh;
 }
