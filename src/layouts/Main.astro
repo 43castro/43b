@@ -1,10 +1,9 @@
 ---
 import Nav from "../components/Nav.astro";
-
 ---
 
 
-<html lang="es" class="">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,22 +12,36 @@ import Nav from "../components/Nav.astro";
     <meta name="generator" content={Astro.generator} />
     <title>hershel</title>
   </head>
-  <div class="bg-gradient-to-t from-transparent to-neutral-900 p-4 h-28 w-full fixed top-0 z-10"></div>
-  <Nav></Nav>
-    <slot />
+  <main class="w-1/3 mx-auto h-screen px-2">
+    <Nav></Nav>
+    <slot /> 
+  </main>
 </html>
 
 <style is:global>
 :root {
-  --background-color-light: #ffffff;
-  --text-color-light: #1A1A1A;
-  --background-color-dark: #1A1A1A;
-  --text-color-dark: #ffffff;
+  --background-color-light: rgb(206, 205, 195);
+  --text-color-light: rgb(16, 15, 15);
+  --background-color-dark: rgb(16, 15, 15);
+  --text-color-dark: rgb(206, 205, 195);
+
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
+  font-family: Geist-SemiBold;
+}
+
+p {
+  font-family: Geist-SemiBold;
 }
 
 @media (prefers-color-scheme: dark) {

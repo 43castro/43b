@@ -2,6 +2,7 @@
 import Nav from "../components/Nav.astro";
 import TableOfContents from "../components/TableOfContents.astro";
 const { frontmatter } = Astro.props;
+import Main from "./Main.astro";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -10,26 +11,19 @@ const { frontmatter } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title}</title>
-    <body class="bg-neutral-900 text-white">
-        <div
-            class="fixed top-0 z-10 h-28 w-full bg-gradient-to-t from-transparent to-neutral-900 p-4"
-        >
-        </div>
+    <Main>
         <main
-            class="relative mx-auto flex min-h-screen max-w-3xl overflow-hidden px-10 pb-72 pt-32"
-        >
-            <Nav />
+            class="overflow-hidden px-2 pb-72 pt-20">
             <div
                 style="transform: translate(-280px, 175px);"
-                class="fixed top-0 px-10"
-            >
-                <TableOfContents />
+                class="fixed top-0 px-10">
+                <TableOfContents/>
             </div>
             <div class="h-full w-full">
                 <div class="flex justify-between">
                     <div>
-                        <div class="mb-2 font-bold">{frontmatter.title}</div>
-                        <div class="mb-10 text-sm font-extralight opacity-80">
+                        <div class="mb-2 font-medium text-5xl">{frontmatter.title}</div>
+                        <div class="mb-10 text-md font-extralight opacity-80">
                             <time datetime={frontmatter.date.toISOString()}
                                 >{
                                     frontmatter.date.toLocaleDateString(
@@ -55,23 +49,41 @@ const { frontmatter } = Astro.props;
                 </main>
             </div>
         </main>
-    </body>
+    </Main>
 </html>
 
 <style is:global>
+
+    @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+
     .prose p + p {
-        margin-bottom: 55px;
+        margin-bottom: 35px;
+        color: rgb(206, 205, 195);
     }
 
     .prose p {
-        line-height: 2em;
+        color: rgb(206, 205, 195);
+        line-height: 1.5em;
+        font-size: 20px;
+        letter-spacing: 0.25px;
     }
-    .prose h1,
+    .prose h1{
+        color: rgb(206, 205, 195);
+        font-weight: bold;
+        line-height: 3em;
+        font-size: 23px;
+    }
     .prose h2,
     .prose h3,
     .prose h4,
     .prose h5 {
-        color: white;
+        color: rgb(206, 205, 195);
         font-weight: bold;
         line-height: 3em;
         font-size: large;
@@ -81,12 +93,16 @@ const { frontmatter } = Astro.props;
     .prose strong,
     .prose ol,
     .prose ul {
-        color: white;
+        color: rgb(206, 205, 195);
     }
 
     .prose a {
-        font-weight: bold;
+        font-weight: regular;
         text-decoration: underline;
+    }
+
+    .prose a:hover{
+        color: rgb(67, 133, 190);
     }
     .prose img {
         border-radius: 0.5rem;
