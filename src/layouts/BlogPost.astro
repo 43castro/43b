@@ -17,29 +17,18 @@ import "../styles/global.css"
                     <div>
                         <div class="mb-2 font-medium text-4xl mx-2">{frontmatter.title}</div>
                         <div class="mb-10 text-md font-extralight opacity-80 mx-2">
-                            <time datetime={frontmatter.date.toISOString()}
-                                >{
-                                    frontmatter.date.toLocaleDateString(
-                                        undefined,
-                                        {
-                                            year: "numeric",
-                                            month: "long",
-                                            timeZone: "CET",
-                                        },
-                                    )
-                                }</time
-                            >
+                            <time datetime={frontmatter.date.toISOString()}>
+                            {frontmatter.date.toLocaleDateString(undefined,{
+                                year: "numeric",
+                                month: "long",
+                                timeZone: "CET",})}</time>
                         </div>
                     </div>
                 </div>
-                <img
-                    src={frontmatter.image}
-                    alt=""
-                    class="mb-6 rounded-lg shadow-lg"
-                />
-                <main class="prose">
+                <img src={frontmatter.image} alt="" class="mb-6 rounded-lg shadow-lg"/>
+                <article class="prose">
                     <slot />
-                </main>
+                </article>
             </div>
     </Main>
 </html>
