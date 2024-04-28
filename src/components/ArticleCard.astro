@@ -7,18 +7,13 @@ const { blog } = Astro.props;
 const { title, date } = blog.data;
 ---
 
-<div class="py-2 px-2 hover:bg-neutral-800 hover:rounded-lg hover:cursor-pointer text-xl flex justify-between">
+<div class="py-2 px-2  hover:rounded-lg hover:cursor-pointer text-xl flex justify-between">
         <a href={`/blog/${blog.slug}`} class="underline">{title}</a>
         <time class="opacity-50" datetime={date.toISOString()}>{date.toLocaleDateString(undefined, {
             month: "numeric",
             year: "numeric",
             timeZone: "CET",
-        })}</time>
+        })}</time> 
     </div>
 </div>
 
-
-<style>
-
-
-</style>

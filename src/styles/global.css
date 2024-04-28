@@ -146,10 +146,6 @@ p > a:hover {
 	color: var(--flexoki-cyan-400)
 }
 
-a:hover {
-	color: var(--accent);
-}
-
 p {
 	margin-bottom: 1em;
 }
