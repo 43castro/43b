@@ -1,161 +1,41 @@
 ---
-import Nav from "../components/Nav.astro"
 import Main from "../layouts/Main.astro"
+import "../styles/global.css"
 ---
 
+<title>About - Castro</title>
 <Main>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title></title>
-          <style>
-            .grid-container {
-              display: grid;
-              grid-template-columns: repeat(5, 1fr);
-              grid-template-rows: auto auto;
-              gap: 10px;
-            }
-        
-            .block {
-            background-color: #252525;
-            border-radius: 20px;
-            cursor: pointer;
-            }
-        
-            .block1 {
-              grid-column: span 2;
-              grid-row: span 2;
-              padding: 80px;
-              font-size: 40px;
-              font-weight: bold;
-            }
-        
-            .block2 {
-              grid-column: 3;
-              grid-row: 1;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            .block3 {
-              grid-column: 4;
-              grid-row: 1;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            .block4 {
-              grid-column: 5;
-              grid-row: 1;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            .block5 {
-              grid-column: 5;
-              grid-row: 2;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            .block6 {
-              grid-column: 3;
-              grid-row: 2;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .block7 {
-              grid-column: 4;
-              grid-row: 2;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .block8 {
-              grid-column: 5;
-              grid-row: 2;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .block9 {
-              grid-column: 6;
-              grid-row: 2;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .icon{
-              width: 100px;
-            }
-            
-            .info{
-            background-color: #252525;
-            border-radius: 20px;
-            padding: 70px;
-            font-size: 40px;
-            }
-
-            .links{ 
-            background-color: #252525;
-            border-radius: 20px;
-            padding: 70px;
-            font-size: 23px;
-            }
-
-            #changeText { 
-              color: white;
-              background: linear-gradient(to right, white, grey); /* Default gradient color */
-              -webkit-background-clip: text; /* Clip text to background */
-              -webkit-text-fill-color: transparent;
-            }
-
-            .block:hover ~ #changeText {
-              color: red; 
-            }
-
-
-          </style>
-        </head>
-        <body>
-        <div class="h-full w-1/2 mx-auto px-6 mt-36 space-y-5">
-          <div class="info">Me gusta construir cosas y profundizo en los temas que me gustan. Valoro el diseño, la sencillez, el rendimiento y el interés. Todo lo que hago es gratuito y de código abierto. </div>
-          <div class="grid-container">
-            <div class="block block1">Aprendiendo y explorando con
-                <div id="changeText" class="">todo.</div>
-            </div>
-            <div id="resolve" class="block block2 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Resolve.', 'linear-gradient(to right, red, orange)')" onmouseout="resetText()"><img class="icon" src="/resolve.png" alt=""></div>
-            <div class="block block3 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Final Cut Pro.')"><img class="icon" src="/finalcut.png" alt=""></div>
-            <div class="block block4 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('VS Code.')" onmouseout="resetText()"><img class="icon" src="/vscode.png" alt=""></div>
-            <div class="block block5 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Photoshop.')" onmouseout="resetText()"><img class="icon" src="/photoshop.png" alt=""></div>
-            <div class="block block6 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Blender.')" onmouseout="resetText()"><img class="icon" src="/blender.png" alt=""></div>
-            <div class="block block7 hover-text transition duration-300 grayscale ease-in-out transform hover:grayscale-0 hover:scale-105" onmouseover="changeText('Logic Pro.')" onmouseout="resetText()"><img class="icon" src="/logic.png" alt=""></div>
-          </div>
-          <div class="links flex justify-center gap-10">
-            <a class="flex ring-1 ring-white rounded-full px-6 py-2 gap-2"><svg class="mt-1" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 012 2v7"/><path d="M6 9v12"/></svg>Github</a>
-            <a class="flex ring-1 ring-white rounded-full px-6 py-2 gap-2"><svg class="mt-1.5" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><path fill="var(--geist-fill, currentColor)" stroke="none" d="M16.99 0H20.298L13.071 8.26L21.573 19.5H14.916L9.702 12.683L3.736 19.5H0.426L8.156 10.665L0 0H6.826L11.539 6.231L16.99 0ZM15.829 17.52H17.662L5.83 1.876H3.863L15.829 17.52Z"/></svg>Twitter</a>
-          </div>
-        </div>
-        </body>
-        </html>       
-    </div>
-
-    <script lang="js">
-
-function changeText(text, gradientColor) {
-  document.getElementById('changeText').innerText = text;
-  document.getElementById('changeText').style.background = gradientColor;
-}
-function resetText() {
-  document.getElementById('changeText').innerText = "todo.";
-  document.getElementById('changeText').style.background = "white";
-}
-    </script>
+	<body>
+		<div class="h-full mt-20 mb-10">
+      <h1 class="text-3xl px-2 mb-6">Sobre mi</h1>
+      <hr class="mb-8 mx-1.5">
+      <p class="px-2">Hola! Soy Castro.</p>
+      <p class="px-2">Escribo guías sobre tecnología, flujos de trabajo audiovisual y todos los temas interesantes que encuentro.
+        Valoro las explicaciones concisas, la información que me ayuda a aprender y las herramientas hechas con propósito. Espero que 
+        encuentres nuevos temas aquí y aprendas algo nuevo. ¡Gracias por pasarte! 
+      </p>
+      <p class="px-2">Este sitio está hecho con:
+        <ul class="px-2 list-inside list-disc mb-10">
+          <li><a target="_blank" href="https://astro.build/">Astro</a> como framework,</li>
+          <li><a target="_blank" href="https://tailwindcss.com/">Tailwind</a> for estilar,</li>
+          <li><a target="_blank" href="https://www.markdownguide.org/">Markdown</a> como formato para escribir,</li>
+          <li>desplegado en <a target="_blank" href="https://www.netlify.com/">Netlify</a>,</li>
+          <li>y usa <a target="_blank" href="https://github.com/kepano/flexoki">Flexoki</a> como tema y <a target="_blank" href="https://vercel.com/font">Geist</a> como fuente.</li>  
+        </ul>
+      </p>
+      <p class="px-2">Recomiendo estas herramientas:
+          <ul class="px-2 list-inside list-disc mb-10">
+            <li><a target="_blank" href="https://obsidian.md/">Obsidian</a> para escribir y tomar notas,</li>
+            <li><a target="_blank" href="https://culturedcode.com/things/">Things</a> para tares,</li>
+            <li><a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a> para programar</li>
+            <li> y <a target="_blank" href="https://www.blackmagicdesign.com/es/products/davinciresolve/">DaVinci Resolve</a> para editar vídeos.</li>  
+          </ul>
+      </p>
+      <p class="px-2">¿Preguntas?</p>
+        <ul class="px-2 list-inside list-disc mb-10">
+          <li><a target="_blank" href="https://github.com/43hershel">GitHub</a></li>
+          <li><a target="_blank" href="https://twitter.com/43hershel">X</a></li>
+        </ul>
+		</div>
+	</body>
 </Main>
