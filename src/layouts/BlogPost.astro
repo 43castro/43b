@@ -1,6 +1,4 @@
 ---
-import Nav from "../components/Nav.astro";
-import TableOfContents from "../components/TableOfContents.astro";
 const { frontmatter } = Astro.props;
 import Main from "./Main.astro";
 import "../styles/global.css"  
@@ -13,18 +11,12 @@ import "../styles/global.css"
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title}</title>
     <Main>
-        <main
-            class="overflow-hidden px-2 pb-72 pt-20">
-            <div
-                style="transform: translate(-280px, 175px);"
-                class="fixed top-0 px-10">
-                <TableOfContents/>
-            </div>
+        <main class="pb-72 pt-20">
             <div class="h-full w-full">
                 <div class="flex justify-between">
                     <div>
-                        <div class="mb-2 font-medium text-5xl">{frontmatter.title}</div>
-                        <div class="mb-10 text-md font-extralight opacity-80">
+                        <div class="mb-2 font-medium text-4xl mx-2">{frontmatter.title}</div>
+                        <div class="mb-10 text-md font-extralight opacity-80 mx-2">
                             <time datetime={frontmatter.date.toISOString()}
                                 >{
                                     frontmatter.date.toLocaleDateString(
@@ -49,7 +41,6 @@ import "../styles/global.css"
                     <slot />
                 </main>
             </div>
-        </main>
     </Main>
 </html>
 

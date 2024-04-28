@@ -1,124 +1,220 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+:root {
+	color-scheme: light;
 
- :root {
-	--background-color-light: rgb(206, 205, 195);
-	--text-color-light: rgb(16, 15, 15);
-	--background-color-dark: rgb(16, 15, 15);
-	--text-color-dark: rgb(206, 205, 195);
-  }
+	--flexoki-black:       #100F0F;
+	--flexoki-paper:       #FFFCF0;
+
+	--flexoki-950:         #1C1B1A;
+	--flexoki-900:         #282726;
+	--flexoki-850:         #343331;
+	--flexoki-800:         #403E3C;
+	--flexoki-700:         #575653;
+	--flexoki-600:         #6F6E69;
+	--flexoki-500:         #878580;
+	--flexoki-300:         #B7B5AC;
+	--flexoki-200:         #CECDC3;
+	--flexoki-150:         #DAD8CE;
+	--flexoki-100:         #E6E4D9;
+	--flexoki-50:          #F2F0E5;
+	
+	--flexoki-red-600:     #AF3029;
+	--flexoki-red-400:     #D14D41;
+	
+	--flexoki-orange-600:  #BC5215;
+	--flexoki-orange-400:  #DA702C;
+	
+	--flexoki-yellow-900:  #4D3A0B;
+	--flexoki-yellow-600:  #AD8301;
+	--flexoki-yellow-400:  #D0A215;
+	--flexoki-yellow-100:  #FCEEB8;
+	
+	--flexoki-green-600:   #66800B;
+	--flexoki-green-400:   #879A39;
+	
+	--flexoki-cyan-950:    #142625;
+	--flexoki-cyan-600:    #24837B;
+	--flexoki-cyan-400:    #3AA99F;
+	--flexoki-cyan-50:     #EBF2E7;
+	
+	--flexoki-blue-600:    #205EA6;
+	--flexoki-blue-400:    #4385BE;
+	
+	--flexoki-purple-600:  #5E409D;
+	--flexoki-purple-400:  #8B7EC8;
+	
+	--flexoki-magenta-600: #A02F6F;
+	--flexoki-magenta-400: #CE5D97;
+}
 
 body {
 	font-family: 'Geist', sans-serif;
 	font-size: 20px;
+	font-weight: 200;
 	line-height: 1.7;
-	background-color: var(--background-color-light);
-	color: var(--text-color-light);
-	font-family: Geist-SemiBold;
+	background-color: var(--flexoki-paper);
+	color: var(--flexoki-black);
 }
 
 @font-face {
 	font-family: 'Geist';
 	src: url('/fonts/Geist-Regular.otf') format('otf');
-	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
+	color: var(--flexoki-paper)
 }
+
+@font-face {
+	font-family: 'GeistMono';
+	src: url('/fonts/GeistMono-SemiBold.otf') format('otf');
+	font-style: normal;
+	font-display: swap;
+	color: var(--flexoki-paper)
+}
+
   
 @media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+	}
 	body {
-		background-color: var(--background-color-dark);
-		color: var(--text-color-dark);
+		background-color: var(--flexoki-black);
+		color: var(--flexoki-150);
+	}
+	.prose p {
+		color: var(--flexoki-150)
+	}
+	.scrollable-element {
+		scrollbar-color: dark;
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
+
+.scrollable-element {
+	scrollbar-color: light;
 }
+
 h1 {
-	font-size: 3.052em;
+	font-size: 23px;
+	font-weight: bold;
+	margin-bottom: 8px;
 }
+  	
 h2 {
-	font-size: 2.441em;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
 }
+
 h3 {
-	font-size: 1.953em;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
 }
+
 h4 {
-	font-size: 1.563em;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
+
 h5 {
-	font-size: 1.25em;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
 }
-strong,
+
+h6 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
 b {
 	font-weight: 700;
 }
+
 a {
-	color: var(--accent);
+	text-decoration: underline;
 }
+
+p > a {
+	color: var(--flexoki-cyan-400)
+}
+
+p > a:hover {
+	color: var(--flexoki-cyan-600)
+}
+
 a:hover {
 	color: var(--accent);
 }
+
 p {
 	margin-bottom: 1em;
 }
 .prose p {
 	margin-bottom: 2em;
 }
+
 textarea {
 	width: 100%;
 	font-size: 16px;
 }
+
 input {
 	font-size: 16px;
 }
-table {
-	width: 100%;
+
+table, th, td {
+	width: 50%;
+	text-align: center;
+	padding: 10px;
+	margin: auto;
+	border: 1px solid rgba(206, 205, 195, 0.2);
+	border-radius: 10px;
+	margin-bottom: 20px;
+
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
+
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
 	border-radius: 2px;
+	font-family: GeistMono-SemiBold;
 }
+
 pre {
 	padding: 1.5em;
-	border-radius: 8px;
+	border-radius: 10px;
+	border-color: #cecdc35d;
+	border-width: 1px;
+	background-color: #100F0F;
+	margin-bottom: 20px;
 }
-pre > code {
-	all: unset;
-}
+
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid var(--flexoki-orange-400);
 	padding: 0 0 0 20px;
 	margin: 0px;
-	font-size: 1.333em;
+	font-size: 24px;
 }
+
 hr {
-	border: none;
+	border: solid 1px;
+	opacity: 20%;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
+		padding: 6px;
 	}
 }
 
@@ -140,71 +236,26 @@ hr {
 	white-space: nowrap;
 }
 
-
-.prose p + p {
-	margin-bottom: 35px;
-	color: rgb(206, 205, 195);
-}
-
 .prose p {
-	color: rgb(206, 205, 195);
-	line-height: 1.5em;
-	font-size: 20px;
-	letter-spacing: 0.25px;
-}
-.prose h1{
-	color: rgb(206, 205, 195);
-	font-weight: bold;
-	line-height: 3em;
-	font-size: 23px;
-}
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5 {
-	color: rgb(206, 205, 195);
-	font-weight: bold;
-	line-height: 3em;
-	font-size: large;
+	margin-bottom: 35px;
 }
 
-.prose p,
-.prose strong,
-.prose ol,
-.prose ul {
-	color: rgb(206, 205, 195);
+.prose ul{
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-bottom: 20px;
 }
 
-.prose a {
-	font-weight: regular;
-	text-decoration: underline;
+.prose ul ul{
+	margin-left: 5%;
 }
 
-.prose a:hover{
-	color: rgb(67, 133, 190);
+.prose ol{
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-bottom: 1em;
 }
-.prose img {
-	border-radius: 0.5rem;
-}
-
-.prose code,
-.prose pre {
-	color: grey;
-}
-
-.astro-code {
-	color: orange;
-}
-
-::-webkit-scrollbar {
-	width: 0.75em;
-}
-
-::-webkit-scrollbar-track {
-	background: #262626;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #525252;
-	border-radius: 10vh;
+ 
+.prose li::marker{
+	color: #cecdc393;
 }
