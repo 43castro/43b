@@ -86,6 +86,13 @@ body {
 	.scrollable-element {
 		scrollbar-color: dark;
 	}
+	select {
+		border-radius: 10%;
+		text-decoration: underline;
+		background-color: var(--flexoki-black);
+		color: var(--flexoki-paper);
+		opacity: 80%;
+	}
 }
 
 
@@ -256,3 +263,4 @@ hr {
 .prose li::marker{
 	color: #cecdc393;
 }
+
