@@ -6,4 +6,4 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
-Something
+> *work in progress*

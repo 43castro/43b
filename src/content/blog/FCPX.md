@@ -6,10 +6,10 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
+> *work in progress*
 
 ## Organizar archivos 
 
 
 ## Atajos de teclado útiles 
 
-***work in progress...***
