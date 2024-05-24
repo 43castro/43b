@@ -2,7 +2,9 @@
 import { getCollection } from "astro:content";
 import Main from '../layouts/Main.astro'
 import ArticleCard from '../components/ArticleCard.astro'
+import ExperimentCard from "../components/ExperimentCard.astro";
 const allPosts = await getCollection("blog");
+const allExperiments = await getCollection("experiments");
 ---
 
 <Main title="Posts">
@@ -11,6 +13,12 @@ const allPosts = await getCollection("blog");
 		<h1 class="text-3xl px-2 mb-6">Guías</h1>
 		<hr class="mb-10 mx-1.5">
 			{allPosts.map((p) => <ArticleCard blog={p}/>)}
+		<div class="mt-20">
+			<h1 class="text-3xl px-2 mb-6">Experimentos</h1>
+			<hr class="mb-10 mx-1.5">
+			{allExperiments.map((p) => <ExperimentCard experiments={p}/>)}
+		</div>	
 		</div>
+	
 	</body>
 </Main>
