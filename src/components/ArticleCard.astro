@@ -4,12 +4,12 @@ type Props = {
     blog: CollectionEntry<"blog">; 
 };
 const { blog } = Astro.props;
-const { title, date } = blog.data;
+const { title, pubDate } = blog.data;
 ---
 
 <div class="py-2 px-2  hover:rounded-lg hover:cursor-pointer text-xl flex justify-between">
         <a href={`/blog/${blog.slug}`} class="underline">{title}</a>
-        <time class="opacity-50" datetime={date.toISOString()}>{date.toLocaleDateString(undefined, {
+        <time class="opacity-50" datetime={pubDate.toISOString()}>{pubDate.toLocaleDateString(undefined, {
             month: "numeric",
             year: "numeric",
             timeZone: "CET",

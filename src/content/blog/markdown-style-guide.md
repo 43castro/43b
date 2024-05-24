@@ -1,7 +1,7 @@
 ---
 title: 'Markdown Style Guide'
 description: 'A guide to the ultimate server'
-date: 2022-07-08
+pubDate: 2022-07-08
 image: '/blog-placeholder-3.jpg'
 tags: ["blog", "anything"]
 ---
