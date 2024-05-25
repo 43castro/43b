@@ -6,7 +6,7 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
-***work in progress...***
+> *work in progress*
 
 ## Video + Audio
 - Stock Vídeo

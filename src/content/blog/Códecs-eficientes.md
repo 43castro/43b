@@ -1,11 +1,11 @@
 ---
-title: 'DaVinci Resolve'
+title: 'Códecs'
 description: 'Una guía para entender mejor DaVinci Resolve'
 pubDate: 2024-02-08
 image: ''
 tags: ["blog", "astro"]
 ---
 
-> *work in progress*
+Códecs  
 
-Esta es una guía orgánica. Irá creciendo con el tiempo.
+> *work in progress*
