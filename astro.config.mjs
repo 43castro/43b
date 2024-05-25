@@ -10,4 +10,8 @@ export default defineConfig({
   markdown: {
     shikiConfig: { theme: flexokiDark },
   },
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en", "eu"],
+  },
 });

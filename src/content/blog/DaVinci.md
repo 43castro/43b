@@ -7,4 +7,5 @@ tags: ["blog", "astro"]
 ---
 
 > *work in progress*
+
 Esta es una guía orgánica. Irá creciendo con el tiempo.
