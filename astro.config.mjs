@@ -6,6 +6,7 @@ import flexokiDark from "./src/flexokiDark.json"
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://castro.eus",
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     shikiConfig: { theme: flexokiDark },
