@@ -5,12 +5,7 @@ import "../styles/global.css"
 ---
 
 <html lang="es" class="scroll-smooth">
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
-    <Main>
+    <Main title={frontmatter.title} description={frontmatter.description}>
         <main class="pb-72 pt-20">
             <div class="h-full w-full">
                 <div class="flex justify-between">
@@ -18,7 +13,7 @@ import "../styles/global.css"
                         <div class="mb-2 font-medium text-4xl mx-2">{frontmatter.title}</div>
                         <div class="mb-10 text-md font-extralight opacity-80 mx-2">
                             <time datetime={frontmatter.pubDate.toISOString()}>
-                            {frontmatter.pubDate.toLocaleDateString(undefined,{
+                            {frontmatter.pubDate.toLocaleDateString("es-ES",{
                                 year: "numeric",
                                 month: "long",
                                 timeZone: "CET",})}</time>
