@@ -49,7 +49,7 @@
 body {
 	font-family: 'Geist', sans-serif;
 	font-size: 20px;
-	font-weight: 200;
+	font-weight: 400;
 	line-height: 1.7;
 	background-color: var(--flexoki-paper);
 	color: var(--flexoki-black);
@@ -107,9 +107,9 @@ h1 {
 }
   	
 h2 {
-	font-size: 20px;
+	font-size: 21px;
 	font-weight: bold;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 h3 {
@@ -142,6 +142,11 @@ b {
 
 a {
 	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+nav a {
+	text-decoration: none;
 }
 
 a:hover{
@@ -261,6 +266,6 @@ hr {
 }
  
 .prose li::marker{
-	color: #cecdc393;
+	color: #cecdc393; 	
 }
 
