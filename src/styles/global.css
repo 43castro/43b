@@ -269,3 +269,7 @@ hr {
 	color: #cecdc393; 	
 }
 
+.prose hr{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
