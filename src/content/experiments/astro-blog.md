@@ -1,6 +1,6 @@
 ---
 title: 'Blogs con Astro'
-description: 'Una guía para entender mejor DaVinci Resolve'
+description: 'Una guía explicativa sobre cómo construí este blog'
 pubDate: 2024-08-04
 image: ''
 tags: ["blog", "astro"]
