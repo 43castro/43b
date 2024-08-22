@@ -1,7 +1,7 @@
 ---
 title: 'Espacios virtuales'
 description: 'Una guía para introducir espacios virtuales'
-pubDate: 2024-02-08
+pubDate: 2024-06-08
 image: ''
 tags: ["blog", "astro"]
 ---
