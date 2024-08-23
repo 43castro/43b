@@ -9,6 +9,9 @@ tags: ["blog", "astro"]
 > *work in progress*
 
 ## Video + Audio
+- Correción de color
+    - [Color.io - Analog Photo Editor & Look Designer](https://www.color.io/)
+    - [Dehancer OFX plugins for DaVinci Resolve](https://www.dehancer.com/shop/video/davinci_resolve)
 - Stock Vídeo
     - [Mixkit - Awesome free assets for your next video project](https://mixkit.co/) ⭐️
 - Audio
