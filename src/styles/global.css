@@ -46,6 +46,24 @@
 	--flexoki-magenta-400: #CE5D97;
 }
 
+
+@font-face {
+	font-family: 'Schibsted Grotesk';
+	src: url('/fonts/SchibstedGrotesk-VariableFont_wght.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
 body {
 	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 20px;
@@ -89,16 +107,16 @@ body {
 }
 
 h1 {
-	font-family: 'Schibsted Grotesk', sans-serif;
+	font-family: 'Schibsted Grotesk';
 	font-size: 23px;
-	font-weight: bold;
+	font-weight: 600;
 	margin-bottom: 8px;
 }
 
 h2 {
 	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 25px;
-	font-weight: bold;
+	font-weight: 600;
 	margin-bottom: 12px;
 }
 
