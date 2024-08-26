@@ -1,53 +1,53 @@
 :root {
 	color-scheme: light;
 
-	--flexoki-black:       #100F0F;
-	--flexoki-paper:       #FFFCF0;
+	--flexoki-black: #100F0F;
+	--flexoki-paper: #FFFFFF;
 
-	--flexoki-950:         #1C1B1A;
-	--flexoki-900:         #282726;
-	--flexoki-850:         #343331;
-	--flexoki-800:         #403E3C;
-	--flexoki-700:         #575653;
-	--flexoki-600:         #6F6E69;
-	--flexoki-500:         #878580;
-	--flexoki-300:         #B7B5AC;
-	--flexoki-200:         #CECDC3;
-	--flexoki-150:         #DAD8CE;
-	--flexoki-100:         #E6E4D9;
-	--flexoki-50:          #F2F0E5;
-	
-	--flexoki-red-600:     #AF3029;
-	--flexoki-red-400:     #D14D41;
-	
-	--flexoki-orange-600:  #BC5215;
-	--flexoki-orange-400:  #DA702C;
-	
-	--flexoki-yellow-900:  #4D3A0B;
-	--flexoki-yellow-600:  #AD8301;
-	--flexoki-yellow-400:  #D0A215;
-	--flexoki-yellow-100:  #FCEEB8;
-	
-	--flexoki-green-600:   #66800B;
-	--flexoki-green-400:   #879A39;
-	
-	--flexoki-cyan-950:    #142625;
-	--flexoki-cyan-600:    #24837B;
-	--flexoki-cyan-400:    #3AA99F;
-	--flexoki-cyan-50:     #EBF2E7;
-	
-	--flexoki-blue-600:    #205EA6;
-	--flexoki-blue-400:    #4385BE;
-	
-	--flexoki-purple-600:  #5E409D;
-	--flexoki-purple-400:  #8B7EC8;
-	
+	--flexoki-950: #1C1B1A;
+	--flexoki-900: #282726;
+	--flexoki-850: #343331;
+	--flexoki-800: #403E3C;
+	--flexoki-700: #575653;
+	--flexoki-600: #6F6E69;
+	--flexoki-500: #878580;
+	--flexoki-300: #B7B5AC;
+	--flexoki-200: #CECDC3;
+	--flexoki-150: #DAD8CE;
+	--flexoki-100: #E6E4D9;
+	--flexoki-50: #F2F0E5;
+
+	--flexoki-red-600: #AF3029;
+	--flexoki-red-400: #D14D41;
+
+	--flexoki-orange-600: #BC5215;
+	--flexoki-orange-400: #DA702C;
+
+	--flexoki-yellow-900: #4D3A0B;
+	--flexoki-yellow-600: #AD8301;
+	--flexoki-yellow-400: #D0A215;
+	--flexoki-yellow-100: #FCEEB8;
+
+	--flexoki-green-600: #66800B;
+	--flexoki-green-400: #879A39;
+
+	--flexoki-cyan-950: #142625;
+	--flexoki-cyan-600: #24837B;
+	--flexoki-cyan-400: #3AA99F;
+	--flexoki-cyan-50: #EBF2E7;
+
+	--flexoki-blue-600: #205EA6;
+	--flexoki-blue-400: #4385BE;
+
+	--flexoki-purple-600: #5E409D;
+	--flexoki-purple-400: #8B7EC8;
+
 	--flexoki-magenta-600: #A02F6F;
 	--flexoki-magenta-400: #CE5D97;
 }
 
 body {
-	font-family: 'Geist', sans-serif;
+	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.7;
@@ -56,36 +56,40 @@ body {
 }
 
 @font-face {
-	font-family: 'Geist';
-	src: url('/fonts/Geist-Regular.otf') format('otf');
+	font-family: 'Schibsted Grotesk';
+	src: url('/fonts/SchibstedGrostesk-VariableFont_wght.ttf') format('ttf');
 	font-style: normal;
 	font-display: swap;
 	color: var(--flexoki-paper)
 }
 
 @font-face {
-	font-family: 'GeistMono';
-	src: url('/fonts/GeistMono-SemiBold.otf') format('otf');
+	font-family: 'JetBrains Mono';
+	src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf');
 	font-style: normal;
 	font-display: swap;
 	color: var(--flexoki-paper)
 }
 
-  
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		color-scheme: dark;
 	}
+
 	body {
 		background-color: var(--flexoki-black);
 		color: var(--flexoki-150);
 	}
+
 	.prose p {
 		color: var(--flexoki-150)
 	}
+
 	.scrollable-element {
 		scrollbar-color: dark;
 	}
+
 	select {
 		border-radius: 10%;
 		text-decoration: underline;
@@ -105,7 +109,7 @@ h1 {
 	font-weight: bold;
 	margin-bottom: 8px;
 }
-  	
+
 h2 {
 	font-size: 25px;
 	font-weight: bold;
@@ -142,25 +146,27 @@ b {
 
 a {
 	text-decoration: underline;
-	text-underline-offset: 3px;
+	text-underline-offset: 5px;
+	text-decoration-color: var(--flexoki-700)
 }
 
 nav a {
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	color: var(--flexoki-cyan-400)
 }
 
 
-p > a:hover {
+p>a:hover {
 	color: var(--flexoki-cyan-400)
 }
 
 p {
 	margin-bottom: 1em;
 }
+
 .prose p {
 	margin-bottom: 2em;
 }
@@ -174,7 +180,9 @@ input {
 	font-size: 16px;
 }
 
-table, th, td {
+table,
+th,
+td {
 	width: 50%;
 	text-align: center;
 	padding: 10px;
@@ -193,7 +201,8 @@ img {
 
 code {
 	border-radius: 2px;
-	font-family: GeistMono;
+	font-family: 'JetBrains Mono';
+	font-style: italic;
 }
 
 pre {
@@ -222,6 +231,7 @@ hr {
 	body {
 		font-size: 18px;
 	}
+
 	main {
 		padding: 6px;
 	}
@@ -249,27 +259,27 @@ hr {
 	margin-bottom: 35px;
 }
 
-.prose ul{
+.prose ul {
 	list-style-type: disc;
 	list-style-position: inside;
 	margin-bottom: 20px;
 }
 
-.prose ul ul{
+.prose ul ul {
 	margin-left: 5%;
 }
 
-.prose ol{
+.prose ol {
 	list-style-type: decimal;
 	list-style-position: inside;
 	margin-bottom: 1em;
 }
- 
-.prose li::marker{
-	color: #cecdc393; 	
+
+.prose li::marker {
+	color: #cecdc393;
 }
 
-.prose hr{
+.prose hr {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
