@@ -55,22 +55,13 @@ body {
 	color: var(--flexoki-black);
 }
 
-article {
-	font-family: 'Schibsted Grotesk', sans-serif;
-}
-
-main {
-	font-family: 'Schibsted Grotesk', sans-serif;
-}
-
-
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		color-scheme: dark;
 	}
 
 	body {
+		font-family: 'Schibsted Grotesk', sans-serif;
 		background-color: var(--flexoki-black);
 		color: var(--flexoki-150);
 	}
@@ -98,24 +89,28 @@ main {
 }
 
 h1 {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 23px;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
 
 h2 {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 25px;
 	font-weight: bold;
 	margin-bottom: 12px;
 }
 
 h3 {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
 
 h4 {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -144,6 +139,7 @@ a {
 }
 
 nav a {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	text-decoration: none;
 }
 
@@ -161,6 +157,7 @@ p {
 }
 
 .prose p {
+	font-family: 'Schibsted Grotesk', sans-serif;
 	margin-bottom: 2em;
 }
 
