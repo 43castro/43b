@@ -55,21 +55,14 @@ body {
 	color: var(--flexoki-black);
 }
 
-@font-face {
-	font-family: 'Schibsted Grotesk';
-	src: url('/fonts/SchibstedGrostesk-VariableFont_wght.ttf') format('ttf');
-	font-style: normal;
-	font-display: swap;
-	color: var(--flexoki-paper)
+article {
+	font-family: 'Schibsted Grotesk', sans-serif;
 }
 
-@font-face {
-	font-family: 'JetBrains Mono';
-	src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf');
-	font-style: normal;
-	font-display: swap;
-	color: var(--flexoki-paper)
+main {
+	font-family: 'Schibsted Grotesk', sans-serif;
 }
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -201,7 +194,7 @@ img {
 
 code {
 	border-radius: 2px;
-	font-family: 'JetBrains Mono';
+	font-family: 'JetBrains Mono Variable', monospace;
 	font-style: italic;
 }
 

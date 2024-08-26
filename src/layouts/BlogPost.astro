@@ -1,10 +1,15 @@
 ---
 const { frontmatter } = Astro.props;
 import Main from "./Main.astro";
-import "../styles/global.css"  
+import "../styles/global.css";
+import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource-variable/jetbrains-mono';
 ---
 
 <html lang="es" class="scroll-smooth">
+    <header>
+        <base target="_blank">
+    </header>
     <Main title={frontmatter.title} description={frontmatter.description}>
         <main class="pb-72 pt-20">
             <div class="h-full w-full">
