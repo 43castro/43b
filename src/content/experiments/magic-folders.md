@@ -7,11 +7,3 @@ tags: ["blog", "astro"]
 ---
 
 > work in progress
-
-## El porqué
-
-## Cómo funciona
-
-
-
-

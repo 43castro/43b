@@ -1,15 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 type Props = {
-    blog: CollectionEntry<"blog">; 
+    blog: CollectionEntry<"blog">;
 };
 const { blog } = Astro.props;
 const { title, pubDate } = blog.data;
 ---
 
-<a href={`/blog/${blog.slug}`} class="py-2 px-2  hover:rounded-lg hover:bg-neutral-800 font-medium hover:cursor-pointer text-xl flex justify-between">{title}
+<a href={`/blog/${blog.slug}`} class="py-2.5 px-2 transition ease-in-out delay-50 hover:rounded-lg hover:bg-neutral-700 font-medium hover:cursor-pointer text-xl flex justify-between">{title}
     <time class="opacity-75" datetime={pubDate.toISOString()}>
         {`${pubDate.getFullYear()} · ${pubDate.getMonth() + 1}`}
     </time>
 </a>
-

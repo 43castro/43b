@@ -1,7 +1,7 @@
 ---
 title: 'Servidor multimedia'
 description: 'Una guía para montar un servidor multimedia'
-pubDate: 2024-02-08
+pubDate: 2023-02-08
 image: ''
 tags: ["blog", "astro"]
 ---
@@ -9,30 +9,30 @@ tags: ["blog", "astro"]
 Esta es una guía para crear un servidor doméstico que ejecute Linux con contenedores [Docker](https://www.docker.com/). En lugar de ser solo un paso a paso, me encantaría que esto fuera una guía para que la gente **entienda** cuál es el propósito de un servidor doméstico y los componentes que alberga.
 
 ## Los objetivos
-- **¿Por qué querrías un servidor?**: Alojar tus propias pelis, administrar tus archivos y fotos desde cualquier lugar, aprender Linux y Ansible, piratear... Es una alternativa muy útil no solo para aprender si no también para no depende de servicios como Google Photos o Netflix.  
+- **¿Por qué querrías un servidor?**: Alojar tus propias pelis, administrar tus archivos y fotos desde cualquier lugar, aprender Linux y Ansible, piratear... Es una alternativa muy útil no solo para aprender si no también para no depende de servicios como Google Photos o Netflix.
 - **¿Cómo funciona mi servidor?**: El servidor está conectado a la corriente y a Ethernet en tu casa. Ejecuta Linux y diferentes aplicaciones dentro de contenedores Docker. Estos son como una especie de [máquinas virtuales](https://es.wikipedia.org/wiki/M%C3%A1quina_virtual) que ejecutan programas con dependencias aisladas pero desde un mismo kernel. Puede acceder a cualquier aplicación desde cualquier parte del mundo y administrar tus archivos. Es una combinación de Google Drive, Netflix y 1Password, pero mucho mejor y más segura. Pero sobre todo, privada. Este es solo un ejemplo, puede ejecutar tus aplicaciones sin contenedores, en máquinas virtuales o como quieras. Esa es la belleza, lo haces como quieras.
 - **¿Qué necesito?**: Comienza con lo que tienes, un ordenador viejo con disco duro debería ser suficiente. Luego escala según sus necesidades. Comprar repuestos de segunda mano siempre es un aprecio para el medio ambiente. Intente encontrar piezas con bajo consumo de energía.
 
-Para que hacerse una idea el mío tiene las siguientes especificaciones: 
+Para que hacerse una idea el mío tiene las siguientes especificaciones:
 - i5 3570
-- 8GB DDR3 
+- 8GB DDR3
 - 256GB SSD + 1TB HDD
 
-Y lo uso con los siguientes servicios: 
+Y lo uso con los siguientes servicios:
 - Plex
 - Syncthing
 - qbittorrent
-- watchtower 
+- watchtower
 
 ## Sistema operativo
 Podrías usar Windows si realmente no te sientes cómodo con Linux. Pero Linux es mucho más seguro a largo plazo, más rápido y soporta mucho más hardware que Windows, especialmente hardware más antiguo. En esta guía estoy usando Fedora 39 Server. Dividiría estas 3 categorías para los recién llegados en términos de uso de su servidor:
 - Principiante: use Windows 10/11 con aplicaciones que se ejecutan en el propio sistema.
 - Intermedio: use la distribución de Linux que quieras con una GUI con aplicaciones que se ejecutan en bare metal o en Docker.
-- Avance: use distribuciones de edición de servidor Linux con aplicaciones que se ejecutan dentro de contenedores de Docker acoplables en la terminal. 
+- Avance: use distribuciones de edición de servidor Linux con aplicaciones que se ejecutan dentro de contenedores de Docker acoplables en la terminal.
 
 
 
-## Discos 
+## Discos
 Tengo 2 discos separados.
 - SSD principal: Kingston de 256 GB
 - Disco duro: 1 TB Seagate 7200 rpm
@@ -87,11 +87,11 @@ sudo service docker status
 
 Luego habilita el servicio para que Docker se inicie al encender el servidor.
 
- ```bash 
+ ```bash
  sudo service docker enable
 ```
 
-### Partes de docker 
+### Partes de docker
 Docker tiene algunos componentes principales que debes entender.
 Tienes dos formas de crear un contenedor de Docker.
 - Comando **docker run**: Este es un comando ejecutado en su terminal que especifica todos los parámetros que necesita.
@@ -110,20 +110,20 @@ Déjame explicarlo con un ejemplo. Si ejecutas qBittorrent en un contenedor Dock
 ```yaml
 volumes:
   - /mnt/second_drive:/downloads
-```  
+```
 Cuando ejecutas el contenedor, qBittorrent te dirá que está descargando los archivos a /downloads, lo cual es correcto, pero realmente está usando /mnt/second_drive como /downloads. Es el mismo lugar, solo que con nombres diferentes. Simplemente especifica tus volúmenes y listo.
 
-- `ports`: puertos expuestos en los contenedores que pueden comunicarse con el exterior. 
+- `ports`: puertos expuestos en los contenedores que pueden comunicarse con el exterior.
 
-## Gestión de contenedores 
-Cuantos más contenedores tengas, más importante es gestionarlos. Puedes usar una herramienta como [Portrainer](https://www.portainer.io/) para la gestión de contenedores, pero a mi me gusta ejecutarlo todo desde el terminal. Por eso uso [Lazydocker](https://github.com/jesseduffield/lazydocker). Es una forma de gestionar contenedores desde la terminal. Para instalarlo: 
+## Gestión de contenedores
+Cuantos más contenedores tengas, más importante es gestionarlos. Puedes usar una herramienta como [Portrainer](https://www.portainer.io/) para la gestión de contenedores, pero a mi me gusta ejecutarlo todo desde el terminal. Por eso uso [Lazydocker](https://github.com/jesseduffield/lazydocker). Es una forma de gestionar contenedores desde la terminal. Para instalarlo:
 
 1. Descarga los binarios desde github en la página de releases. Te recomiendo que consultes la página de github para descargar la versión más actualizada.
 
 ```bash
 wget   https://github.com/jesseduffield/lazydocker/releases/download/v0.21.1/lazydocker_0.21.1_Linux_arm64.tar.gz 
 
-# Ten cuidado con las versiones de ARM64 or x86 versions 
+# Ten cuidado con las versiones de ARM64 or x86 versions
 ```
 
 2. Usa el comando tar para descomprimir el archivo
@@ -132,16 +132,16 @@ wget   https://github.com/jesseduffield/lazydocker/releases/download/v0.21.1/laz
 tar zxf lazydocker_0.20.0_Linux_x86_64.tar.gz
 ```
 
-3. Instálalo en el directorio /usr/local/bin 
+3. Instálalo en el directorio /usr/local/bin
 
 ``` bash
 sudo install lazydocker /usr/local/bin
 ```
 
-Ejecutando el comando 'lazydocker' debería de ser suficiente para inicializar el servicio 
+Ejecutando el comando 'lazydocker' debería de ser suficiente para inicializar el servicio
 
 ## Docker Compose & Containers
-Estos son los diferentes archivos docker-compose y comandos docker run que he utilizado. Los explicaré 1 a 1. Están comentados, no los copies. Es para que los entiendas y los hagas por ti mismo. 
+Estos son los diferentes archivos docker-compose y comandos docker run que he utilizado. Los explicaré 1 a 1. Están comentados, no los copies. Es para que los entiendas y los hagas por ti mismo.
 
 Plex: ([docker info](https://docs.linuxserver.io/images/docker-plex))
 
@@ -153,7 +153,7 @@ plex:
 image: lscr.io/linuxserver/plex:latest
 container_name: plex # <-- name of the container
 ports:  # <-- specifies ports
-- "8200:32400/tcp" 
+- "8200:32400/tcp"
 - "8201:32400/udp"
 environment:
 - PUID=1000 # <-- how the container runs, permissions as user, NOT AS ROOT
@@ -214,52 +214,52 @@ services:
     restart: unless-stopped
 ```
 
-watchtower: 
+watchtower:
 
 ``` yaml
-version: "3" 
-services: 
-	watchtower: 
-	image: containrrr/watchtower 
+version: "3"
+services:
+	watchtower:
+	image: containrrr/watchtower
 	volumes: - /var/run/docker.sock:/var/run/docker.sock
 
 ```
 ## Conexión
-Para conectarte a su servidor, existen tres formas principales. 
-- SSH: Conexión remota al terminal de tu servidor. 
-- Tailscale VPN: Conectándose remotamente a cualquier servicio + ssh a su servidor a través de una VPN Zero trust. Mi opción favorita y más cómoda para la mayoría de casos. 
-- SFTP: Conexión remota a los árboles de ficheros de tu servidor. 
+Para conectarte a su servidor, existen tres formas principales.
+- SSH: Conexión remota al terminal de tu servidor.
+- Tailscale VPN: Conectándose remotamente a cualquier servicio + ssh a su servidor a través de una VPN Zero trust. Mi opción favorita y más cómoda para la mayoría de casos.
+- SFTP: Conexión remota a los árboles de ficheros de tu servidor.
 
 
-## SSH Hardening 
+## SSH Hardening
 Tu configuración principal del servidor será a través de SSH. Vamos a crear una versión reforzada de SSH con lo que se llama un par de claves privadas/públicas. Esto son un par de archivos que generas con tu ordenador y que te permiten a ti y sólo a ti, el propietario de ese par de claves, acceder al servidor. Esto también permite el acceso sin contraseña a tu servidor, lo que lo hace realmente conveniente para acceder a ssh y también es más seguro.  Este par de claves reside en una carpeta oculta llamada .shh.
 
 Para crear un par de claves SSH y hacer que sean utilizables:  [Harden SSH](https://www.youtube.com/watch?v=l1iu3iZq1aQ) + [article](https://tonyteaches.tech/ssh-security/)
-1. Generar un par de claves SSH en cada ordenador: Utilice el comando `ssh-keygen` en cada ordenador para generar un par de claves SSH (clave pública y privada).	
-2. Copia la clave pública en el servidor: En cada ordenador, copie el contenido de la clave pública (que se encuentra en el archivo `~/.ssh/id_rsa.pub`) en el archivo `authorized_keys` del servidor. Puedes hacerlo utilizando el comando `ssh-copy-id` o añadiendo manualmente la clave pública al archivo `authorized_keys` del servidor via sftp. 
+1. Generar un par de claves SSH en cada ordenador: Utilice el comando `ssh-keygen` en cada ordenador para generar un par de claves SSH (clave pública y privada).
+2. Copia la clave pública en el servidor: En cada ordenador, copie el contenido de la clave pública (que se encuentra en el archivo `~/.ssh/id_rsa.pub`) en el archivo `authorized_keys` del servidor. Puedes hacerlo utilizando el comando `ssh-copy-id` o añadiendo manualmente la clave pública al archivo `authorized_keys` del servidor via sftp.
 3. Prueba la conexión SSH: Una vez añadida la clave pública al archivo `authorized_keys` del servidor, deberías poder conectarte mediante SSH al servidor desde cualquiera de los ordenadores sin necesidad de introducir una contraseña. Utilice el comando `ssh` seguido del nombre de usuario y el nombre de host ip del servidor para probar la conexión.
-4. Edite el fichero `sshd_config` y deshabilite `PasswordAuthentication`, `PermitEmptyPasswords no` & `UsePAM no`. También `PermitRootLogin no`. 
+4. Edite el fichero `sshd_config` y deshabilite `PasswordAuthentication`, `PermitEmptyPasswords no` & `UsePAM no`. También `PermitRootLogin no`.
 5. Cambia el puerto por defecto de 22 a otro. SSH normalmente usa el puerto 22 en tu router para conectarse al servidor. Cambia el puerto a otro dado que sabiendo que este es un ajustes por defecto, es más propenso a vulnerabilidad.
 
-## Tailscale 
+## Tailscale
 [Tailscale](https://tailscale.com/)
-Normalmente, para poder conectarte a tu servidor desde fuera de tu red doméstica, utilizarías un DNS Dinámico y te conectas a él utilizando esa IP. Puedes usar algo como el servicio NO-IP. Esto resuelve un problema realmente simple pero molesto. Tu Proveedor de Servicios de Internet cambia tu IP pública cada "X" cantidad de tiempo por protección. Si tu IP pública no cambiara, los atacantes o prácticamente cualquiera con conocimientos podría atacar tu red doméstica. Pero también es un inconviniente para conectarte remotamente a tu servidor. 
+Normalmente, para poder conectarte a tu servidor desde fuera de tu red doméstica, utilizarías un DNS Dinámico y te conectas a él utilizando esa IP. Puedes usar algo como el servicio NO-IP. Esto resuelve un problema realmente simple pero molesto. Tu Proveedor de Servicios de Internet cambia tu IP pública cada "X" cantidad de tiempo por protección. Si tu IP pública no cambiara, los atacantes o prácticamente cualquiera con conocimientos podría atacar tu red doméstica. Pero también es un inconviniente para conectarte remotamente a tu servidor.
 
-Tailscale no es más que una VPN que te conecta directamente a tu servidor. Es, de lejos, la forma más cómoda y segura que he probado. Sin IP pública, sin port-forward literalmente sólo regístrate, en tu servidor y clientes, conéctate a él a través del panel de administración y listo. Es seguro, y encima evitas exponer diferentes servicios a internet que probablemente sean privados. Imagínalo como un red de túneles a los que solo tú tienes acceso. 
+Tailscale no es más que una VPN que te conecta directamente a tu servidor. Es, de lejos, la forma más cómoda y segura que he probado. Sin IP pública, sin port-forward literalmente sólo regístrate, en tu servidor y clientes, conéctate a él a través del panel de administración y listo. Es seguro, y encima evitas exponer diferentes servicios a internet que probablemente sean privados. Imagínalo como un red de túneles a los que solo tú tienes acceso.
 
 ## MAGIC DNS
-Esta es probablemente la mejor característica de Tailscale. Hay dos formas principales que vas a utilizar para acceder al contenido de tu servidor. A través de SSH o a través de intefaces web. Con esta segunda me refiero a que los contenedores de docker, si bien están ejecutándose de fondo, habilitan una manera para que interactúes con ellos a través de una web. La URL suele ser algo como 192.168.0.22:8080. Es decir, la ip local del servidor más el número de los puertos. Si estás acciendo desde fuera de tu red doméstica esto se complica por lo que he mencionado anteriormente. Y usando Tailscale, por mucho que nos de una IP más "cómoda", sigue siendo bastante larga y tediosa. 
+Esta es probablemente la mejor característica de Tailscale. Hay dos formas principales que vas a utilizar para acceder al contenido de tu servidor. A través de SSH o a través de intefaces web. Con esta segunda me refiero a que los contenedores de docker, si bien están ejecutándose de fondo, habilitan una manera para que interactúes con ellos a través de una web. La URL suele ser algo como 192.168.0.22:8080. Es decir, la ip local del servidor más el número de los puertos. Si estás acciendo desde fuera de tu red doméstica esto se complica por lo que he mencionado anteriormente. Y usando Tailscale, por mucho que nos de una IP más "cómoda", sigue siendo bastante larga y tediosa.
 
-La alternativa es usar MagicDNS. Convierte esa IP kilométrica en un alias para que sea de más fácil acceso.  
+La alternativa es usar MagicDNS. Convierte esa IP kilométrica en un alias para que sea de más fácil acceso.
 
-- SSH Antes de MagicDNS: ssh user@110.11.10.20 
-- SSH después de MagicDNS: ssh user@nombre_servidor 
+- SSH Antes de MagicDNS: ssh user@110.11.10.20
+- SSH después de MagicDNS: ssh user@nombre_servidor
 - WebUI de qbittorrent antes de MagicDNS: 110.11.10.20:8080
 - WebUI de qbittorrent después de MagicDNS: nombre_servidor:8080
 
-Estas conexiones no ofrecen una variante segura. Es decir, usan HTTP en vez de HTTPS. Puedes generar certificados propios y provisionar de [esta manera](https://tailscale.com/kb/1153/enabling-https) con una guía de Tailscale si prefieres. 
+Estas conexiones no ofrecen una variante segura. Es decir, usan HTTP en vez de HTTPS. Puedes generar certificados propios y provisionar de [esta manera](https://tailscale.com/kb/1153/enabling-https) con una guía de Tailscale si prefieres.
 
-Tailscale también te proporciona el tiempo de actividad de tus dispositivos en general. En la consola de administración puedes ver qué dispositivos están conectados a tu red Tailscale. Esto funciona si mantienes tus dispositivos permanentemente conectados. 
+Tailscale también te proporciona el tiempo de actividad de tus dispositivos en general. En la consola de administración puedes ver qué dispositivos están conectados a tu red Tailscale. Esto funciona si mantienes tus dispositivos permanentemente conectados.
 
 ## Actualizar el servidor a nuevas versiones de Fedora
 
