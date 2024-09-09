@@ -307,3 +307,8 @@ hr {
   color: #8a817c;
   font-size: 13px;
 }
+
+.prose video {
+  max-width: 100%;
+  border-radius: 8px;
+}

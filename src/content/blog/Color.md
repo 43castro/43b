@@ -8,6 +8,8 @@ tags: ["blog", "astro"]
 
 El color es primero una ciencia y después un arte. Cada cual puede tener su manera y su *look* de cómo quiere que se vean sus vídeos. Pero desde luego que para llegar a esa versión final la base debe de ser buena. Se acabaron los días de importar LUTs de Youtubers que no tienen ni idea de color, ese proceso no es óptimo. Aquí explicaré como pueda, las bases que deberías de entender sobre color. Siento de antemano si hay alguna errata.
 
+Gran parte de esta guía se basa en este vídeo de [Teams2Film](https://www.youtube.com/watch?v=w0ubDSzEEYg).
+
 El color, pasa por tres fases importantes.
 1. Grabar
 2. Editar
@@ -41,5 +43,3 @@ Los pasos técnicos son los siguientes:
 1. Importamos los clips de la cámara en LOG
 2. Abajo a la derecha en el engranaje (o shift+9) entramos a los ajustes del proyecto. Solo hay que meterse en `Color management > Color Science > DaVinci YRGB Color Managed` y marcar la casilla de "Automatic Color management". El `Output Color Space` debería de ser `Rec.709`.
 3. Si tenemos diferentes cámaras, podemos hacer click derecho en los clips y elegir `Input Color Space`. Ahí podremos marcar qué perfil de imágen de entrada estamos usando.
-
-Si quieres más de detalle sobre esto, mira este link de [Teams2Film](https://www.youtube.com/watch?v=w0ubDSzEEYg)
