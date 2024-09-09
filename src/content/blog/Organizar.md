@@ -23,7 +23,7 @@ Aquí un ejemplo:
 1. Creo los [bins](https://youtu.be/WJj-nka2u7Y?si=T8zHBLdkKdJ_jkB7&t=82)/[eventos](https://support.apple.com/es-es/guide/final-cut-pro/verf3fd270b/mac) dentro del editor siguiendo la siguiente estructura. Esto me da una base similar a la que tengo dentro de Finder. Este proceso también se puede agilizar, teniendo por ejemplo una biblioteca de proyectos de plantillas DaVinci o [Final Cut Pro](https://castro.eus/blog/fcpx).
 	- Secuencias/Líneas de tiempo
 	- Vídeo
-	- Audio
+	- Audio.
 	- Gráficos
 2. Suelto todos los archivos que correspondan dentro de ese primer bin o evento.
 3. Añado palabras clave, roles o colores a cada clip para organizarlo:
