@@ -29,11 +29,11 @@ Aquí un ejemplo:
 3. Añado palabras clave, roles o colores a cada clip para organizarlo:
 	- Secuencias/Timelines (smart bins/smart collections*)
 		- Corte 1
-		- Corte 2 60s
+		- Corte 2 60 s
 	- Vídeo (palabras clave ↓)
 		- Lugares
 		- Tipo de cámara
-		- XX fps
+		- XX FPS
 		- Tomas circulares
 	- Audio (palabras clave ↓)
 		- Diálogo
@@ -47,6 +47,6 @@ Aquí un ejemplo:
 4. Selecciono los [puntos de entrada y salida](https://support.apple.com/es-es/guide/final-cut-pro/ver28cca92/mac) en el explorador y me quedo con las partes que me gustan. Final Cut lo hace mejor que DaVinci, pero intento evitar el estilo de edición [«Pancake timeline»](https://motionarray.com/learn/premiere-pro/pancake-timeline-premiere-pro/) o «Selects sequence». Lo he intentado muchas veces y es un lío que confunde a todo el mundo a la larga y hace perder tiempo.
 5. Empiezo a editar
 
-Listo!
+¡Listo!
 
 Este sencillo proceso, que puede automatizarse en su mayor parte, ahorra una enorme cantidad de tiempo. Ha dado solución a muchas de las quejas que he tenido durante el proceso de edición de los proyectos en los que he participado. La organización nos ayuda a ser más eficientes y da margen para entender mejor las herramientas que utilizamos. Toda esta filosofía está inspirada por [este vídeo](https://youtu.be/iaeux3cGtQo?si=vjuUb6zKZbBmop43&t=121) y consiste en trasladar un flujo de trabajo como el de Final Cut a cualquier editor.

@@ -1,8 +1,9 @@
 :root {
   color-scheme: light;
 
-  --flexoki-black: #212121;
+  --flexoki-black: #242422;
   --flexoki-paper: #ffffff;
+  --flexoki-text: #e9ecef;
 
   --flexoki-950: #1c1b1a;
   --flexoki-900: #282726;
@@ -49,7 +50,6 @@
 @font-face {
   font-family: "Schibsted Grotesk";
   src: url("/fonts/SchibstedGrotesk-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -78,11 +78,12 @@ body {
   body {
     font-family: "Schibsted Grotesk";
     background-color: var(--flexoki-black);
-    color: var(--flexoki-150);
+    color: var(--flexoki-paper);
   }
 
   .prose p {
-    color: var(--flexoki-150);
+    color: var(--flexoki-text);
+    margin-bottom: 24px;
   }
 
   .scrollable-element {
@@ -115,8 +116,8 @@ h1 {
 
 h2 {
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 25px;
-  font-weight: extrabold;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 12px;
 }
 
@@ -152,9 +153,6 @@ b {
 }
 
 a {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-color: var(--flexoki-700);
 }
 
 nav a {
@@ -163,13 +161,16 @@ nav a {
 }
 
 a:hover {
-  color: var(--flexoki-cyan-50);
+}
+
+p > a {
   text-decoration: underline;
-  text-decoration-color: var(--flexoki-cyan-400);
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 7px;
 }
 
 p > a:hover {
-  color: var(--flexoki-cyan-400);
+  text-decoration-color: rgba(255, 255, 255, 1);
 }
 
 p {
@@ -220,7 +221,7 @@ pre {
   border-radius: 10px;
   border-color: #cecdc35d;
   border-width: 1px;
-  background-color: #100f0f;
+  background-color: #fff;
   margin-bottom: 20px;
 }
 
@@ -265,12 +266,7 @@ hr {
   white-space: nowrap;
 }
 
-.prose p {
-  margin-bottom: 35px;
-}
-
 .prose a {
-  color: var(--flexoki-cyan-400);
 }
 
 .prose ul {
@@ -311,4 +307,18 @@ hr {
 .prose video {
   max-width: 100%;
   border-radius: 8px;
+}
+
+.prose h2 {
+  font-weight: black;
+}
+
+.prose li > a {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 7px;
+}
+
+.prose li > a:hover {
+  text-decoration-color: rgba(255, 255, 255, 1);
 }

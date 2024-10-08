@@ -33,8 +33,14 @@ Una lista de recursos útiles para el ámbito audiovisual.
     - [Refero](https://refero.design/apps)
     - [Bento Grids](https://bentogrids.com/)
     - [Tendril Studio](https://tendril.studio/)
+    - [DIELINE - The Leading Resource for CPG & Packaging Design](https://thedieline.com/)
+    - [ilovecreatives](https://ilovecreatives.com/)
+    - [visuelle](https://visuelle.co.uk/)
+    - [DoingCoolStuff](https://www.doingcoolstuff.xyz/)
 - Utilidades
     - [Coolors](https://coolors.co/) ⭐️
+    - [DoingCoolStuff](https://www.doingcoolstuff.xyz/)
+    - [Khroma - AI Color Tool for Designers | Discover and Save Color Palettes](https://www.khroma.co/)
 - Tipografías
     - [Fontshare](https://www.fontshare.com/) ⭐️
     - [Awwwards Fonts](https://www.awwwards.com/awwwards/collections/free-fonts/)
@@ -50,6 +56,10 @@ Una lista de recursos útiles para el ámbito audiovisual.
     - [NAURYZREDKEDS](https://www.behance.net/gallery/196325487/FREE-FONT-NAURYZREDKEDS)
     - [OT Build](https://www.behance.net/gallery/199673975/OT-Bulb-Free-Font)
     - [Coolors Fonts](https://coolors.co/fonts)
+    - [Free Faces](https://www.freefaces.gallery/)
+    - [Free Fonts & Typefaces › Fontesk](https://fontesk.com/)
+    - [atipo foundry](https://www.atipofoundry.com/)
+    - [Off Type Foundry](https://off-type.com/)
 - Motion graphics
     - [Opal Work - Icons](https://www.opal.work/)
     - [Boostrap - Icons](https://icons.getbootstrap.com/)

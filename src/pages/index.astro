@@ -8,16 +8,102 @@ const allExperiments = await getCollection("experiments");
 ---
 
 <Main title="castro">
-	<body class="">
-		<div class="h-full mt-20 mb-10">
-		<h1 class="text-3xl px-2 mb-6">Guías</h1>
-		<hr class="mb-10 mx-1.5">
-			{allPosts.map((p) => <ArticleCard blog={p}/>)}
-		<div class="mt-20">
-			<h1 class="text-3xl px-2 mb-6">Experimentos</h1>
-			<hr class="mb-10 mx-1.5">
-			{allExperiments.map((p) => <ExperimentCard experiments={p}/>)}
-		</div>	
-		</div>
-	</body>
+    <body class="text-white">
+        <div class="container">
+            <div class="tabs relative">
+                <!-- Tab Menu -->
+                <input type="radio" name="tab" id="tab-1" checked class="tab-switch hidden">
+                <label for="tab-1" class="tab-label">Guías</label>
+
+                <input type="radio" name="tab" id="tab-2" class="tab-switch hidden">
+                <label for="tab-2" class="tab-label">Experimentos</label>
+
+                <!-- Guías Content -->
+                <div class="tab-content">
+                    <!-- Content for Guías -->
+                    <div class="article-cards">
+                        <!-- Example Article Card -->
+                        {allPosts.map((p) => <ArticleCard blog={p}/>)}
+                    </div>
+                </div>
+
+                <!-- Experimentos Content -->
+                <div class="tab-content">
+                    <!-- Content for Experimentos -->
+                    <div class="experiment-cards">
+                        {allExperiments.map((p) => <ExperimentCard experiments={p}/>)}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </Main>
+
+<style>
+    /* Base styles */
+    body {
+        font-family: Schibsted Grotesk;
+        background: #242422;
+        color: #ecf0f1;
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    .container {
+        margin-top: 3em;
+        gap: 5em; /* Adjusted gap for better spacing */
+    }
+
+    .tabs {
+        position: relative;
+    }
+
+    .tab-label {
+        font-size: 21px;
+        display: inline-block;
+        margin-left: 8px;
+        margin-right: 40px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+        opacity: 0.3; /* Default opacity for inactive tabs */
+        transition: all 0.25s;
+    }
+
+    .tab-label:hover {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        transition: 0.25s;
+    }
+
+    /* Active tab opacity */
+    .tab-switch:checked + .tab-label {
+        opacity: 1; /* Full opacity for the active tab */
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
+
+    .tab-content {
+        display: none; /* Hide all content by default */
+        width: 100%;
+        margin-top: 1em;
+        border-radius: 8px;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Show content for the selected tab */
+    #tab-1:checked ~ .tab-content:nth-of-type(1),
+    #tab-2:checked ~ .tab-content:nth-of-type(2) {
+        display: block; /* Show corresponding content */
+        opacity: 1; /* Make it visible */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Optional: Basic styles for article cards */
+    .article-card, .experiment-card {
+        margin: 0.5rem 0;
+    }
+</style>
