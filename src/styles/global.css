@@ -65,42 +65,9 @@ body {
   font-family: "Schibsted Grotesk", sans-serif;
   font-size: 18px;
   line-height: 1.7;
-  background-color: var(--flexoki-paper);
-  color: var(--flexoki-black);
+  background-color: var(--flexoki-black);
+  color: var(--flexoki-paper);
   letter-spacing: 0.0225em;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-
-  body {
-    font-family: "Schibsted Grotesk";
-    background-color: var(--flexoki-black);
-    color: var(--flexoki-paper);
-  }
-
-  .prose p {
-    color: var(--flexoki-text);
-    margin-bottom: 24px;
-  }
-
-  .scrollable-element {
-    scrollbar-color: dark;
-  }
-
-  select {
-    border-radius: 10%;
-    text-decoration: underline;
-    background-color: var(--flexoki-black);
-    color: var(--flexoki-paper);
-    opacity: 80%;
-  }
-
-  .prose li::marker {
-    color: #cecdc3;
-  }
 }
 
 .scrollable-element {
