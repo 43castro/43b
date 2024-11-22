@@ -2,7 +2,7 @@
   color-scheme: light;
 
   --flexoki-black: #242422;
-  --flexoki-paper: #ffffff;
+  --flexoki-paper: #f8f9fa;
   --flexoki-text: #e9ecef;
 
   --flexoki-950: #1c1b1a;
@@ -83,9 +83,65 @@ h1 {
 
 h2 {
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   margin-bottom: 12px;
+}
+
+summary {
+  display: flex; /* Aligns the custom triangle and text horizontally */
+  align-items: center; /* Ensures vertical alignment */
+  font-size: 23px;
+  cursor: pointer;
+  list-style: none; /* Prevents marker overlap issues */
+}
+
+details[open] summary::before {
+  content: "▼"; /* Downward triangle for expanded state */
+  margin-right: 10px; /* Adds space between the triangle and text */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+summary::before {
+  content: "▶"; /* Rightward triangle for collapsed state */
+  font-size: 0.6em; /* Reduce the font size */
+  margin-right: 12px; /* Adjust right margin */
+  margin-bottom: 7px; /* Adjust bottom margin */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+summary h2 {
+  user-select: none; /* Prevent text selection */
+}
+
+summary h2 {
+  position: relative; /* Required for the pseudo-element positioning */
+  display: inline-block; /* Ensure the pseudo-element aligns correctly */
+}
+
+summary h2::after {
+  content: ""; /* Pseudo-element for the underline */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the text */
+  left: 0;
+  width: 0; /* Initially hidden */
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Matches the text color */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Expand underline on hover */
+summary h2:hover::after,
+summary h2:focus::after, /* Keeps the underline when focused */
+details[open] summary h2::after {
+  /* Keeps the underline when <details> is open */
+  width: 100%; /* Expand underline */
+}
+
+details[open] {
+  margin-bottom: 2em;
 }
 
 h3 {

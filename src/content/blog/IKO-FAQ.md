@@ -6,9 +6,11 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
+
+
 Esta guía pretende resolver dudas frecuentes y básicas sobre el ámbito audiovisual. Todo lo que explico a continuación tiene como base Da Vinci Resolve. Aunque muchas reglas se aplican a otros editores no-lineales como Premiere, Final Cut o Avid. Pero las funciones específicas que se mencionan igual pueden no tener equivalencia en otros programas. Si quieres saber más sobre [Final Cut](https://castro.eus/blog/fcpx/), tienes una guía también.
 
-## ¿Qué formato uso para mis discos duros?
+<details><summary><h2>¿Qué formato uso para mis discos duros?</h2></summary>
 
 La manera en el que formateas tus discos es extremadamente importante. El sistema de archivos es algo con la que mucha gente se suele confundir y que luego causa problemas, bien por lentitud o compatibilidad. El resumen simple es:
 
@@ -21,8 +23,9 @@ Un par de notas sobre [exFAT](https://learn.microsoft.com/en-gb/windows/win32/fi
 Incluyo a Linux porque igual hay alguien que edita en Da Vinci así. exFAT también es compatible con sus peros. NTFS también funciona instalando un paquete extra y si quieres algo nativo, [BTRFS](https://es.wikipedia.org/wiki/Btrfs) funciona bien también.
 
 Si buscas lo mejor, más óptimo y seguro sin ningún tipo de compromiso, un servidor con 3-4 discos en [RAID 5](https://es.wikipedia.org/wiki/RAID) con [ZFS](https://es.wikipedia.org/wiki/ZFS_%28sistema_de_archivos%29) es la mejor opción. ZFS es un sistema de archivos con maneras eficientes de conseguir redundancia y sin mucho sacrificio de velocidad. RAID 5 además nos permite perder hasta 1 disco por cada 4 y no perder ni un solo archivo.
+</details>
 
-## ¿Copias de seguridad? ¿Qué hago?
+<details><summary><h2>¿Copias de seguridad? ¿Qué hago?</h2></summary>
 
 Los backups son exactamente igual de importantes que los discos y formatos que usamos. La regla óptima sobre esto debería de ser el 3-2-1.
 
@@ -31,12 +34,14 @@ Los backups son exactamente igual de importantes que los discos y formatos que u
 - 1 medio de estos en otro sitio.
 
 No es obligatorio seguir este método al pie de la letra. Pero por lo menos tener un clon del disco en el que estés trabajando me parece lo más efectivo. En estos casos, sí que sí es extremadamente recomendable no usar exFAT para tus discos en los que quieras guardar copias de seguridad.
+</details>
 
-## Me organizo fatal, ¿Qué hago?
+<details><summary><h2>Me organizo fatal, ¿Qué hago?</h2></summary>
 
 Tengo una guía sobre eso. Léela [aquí](https://castro.eus/blog/organizar)
+</details>
 
-## ¿Cómo organizo mis proyectos en Da Vinci?
+<details><summary><h2>¿Cómo organizo mis proyectos en Da Vinci?</h2></summary>
 
 Da Vinci usa librerías de proyecto para organizar sus archivos. Como hemos visto antes en los formatos de discos, lo ideal es no cambiar el tipo de formato y trabajar, si se puede de un mismo sistema o de un servidor común para múltiples sistemas.
 
@@ -59,20 +64,30 @@ La estructura general suele verse de la siguiente manera:
 Las **Power bins** se merecen su propia explicación. Son una serie de recursos que puedes acceder en múltiples proyectos contenidos, **una misma biblioteca**. Ej. Tu biblioteca de proyectos de vídeos para la empresa B, tiene disponibles en un Power bin: su logo, su música e imágenes corporativas. Esto evita que tengas que importar muchas veces los mismos recursos y los tengas organizados en un mismo sitio.
 
 Si quieres saber cómo organizar bien tus bibliotecas de Final Cut Pro, consulta [mi guía](https://castro.eus/blog/fcpx/) al respecto.
+</details>
 
 
-
-## ¿Color Management? ¿LOG?
+<details><summary><h2>¿Color Management? ¿LOG?</h2></summary>
 
 También tengo una guía sobre eso. Es densa, pero puedes leerlo [aquí](https://castro.eus/color)
+</details>
 
-## El ordenador va lento ¿Qué hago?
+
+<details><summary><h2>El ordenador va lento ¿Qué hago?</h2></summary>
 
 - Playback -> Render Cache -> User -> Líneas de tiempo pre-renderizadas. Mejor rendimiento y mejores tiempos de renderizado.
 - Haz proxies, versiones más pequeñas de archivos
+</details>
 
-## ¿Audio demasiado bajo o alto? ¿Qué hago?
 
+<details><summary><h2>El ordenador va lento ¿Qué hago?</h2></summary>
+
+- Playback -> Render Cache -> User -> Líneas de tiempo pre-renderizadas. Mejor rendimiento y mejores tiempos de renderizado.
+- Haz proxies, versiones más pequeñas de archivos
+</details>
+
+
+<details><summary><h2>¿Audio demasiado bajo o alto? ¿Qué hago?</h2></summary>
 Tener un volumen consistente en tu máster final es muy importante. Aquí adjunto unos cuanto concepto y procedimientos para que el mix final del vídeo tenga sentido y se adecúe a los estándares finales de distribución de contenido en plataformas digitales.
 
 **dBFS** significa "[decibelios](https://es.wikipedia.org/wiki/Decibelio) a escala completa" ("decibels full scale"). Es una abreviatura utilizada para definir los niveles de amplitud en decibelios en sistemas digitales en relación con el máximo nivel disponible.
@@ -88,9 +103,9 @@ LFKS y LUFS son **sinónimos** = ‘LUFS’ (que se ajusta a los acuerdos de den
 **Normalizar**: ajustar los niveles del audio al target de volumen especificado.
 Para normalizar volumen y saber más sobre exportación, aquí adjunto otro vídeo de [Teams2Films](https://www.youtube.com/watch?v=nZJkcca7vJ4)
 Otro buen vídeo de [EposVox](https://www.youtube.com/watch?v=q-pcO9jqpZ4)
+</details>
 
-
-## ¿WTF es un codec?
+<details><summary><h2>¿WTF es un codec?</h2></summary>
 
 Un codec es la manera en que se codifican y descodifican archivos de vídeo o audio. Hay muchos tipos de codecs (Prores, DNxHR, H.264) y todos ellos pueden ir en contenedores diversos (.mp4, .mov, .mkv...).  Esta manera de codificar y descodificar puede variar tanto en compresión como en resolución y bitrate. Y, por tanto, ser más o menos útiles en depende qué procesos.
 
@@ -114,10 +129,14 @@ Si bien en un ámbito profesional lo óptimo sería guardar el proyecto entero t
 - PROYECTO MÁSTER SOLO VOZ EN OFF
 
 Con estas 5 variantes nos aseguramos que si hay que cambiar algo en el vídeo, tenemos las piezas esenciales del puzzle que no ocupan mucho espacio y que, a su vez, nos dejan hacer cambios significativos. He elegido estas versiones porque son las que suele pedir normalmente el cliente. Además de eso, el cliente **jamás** debería de poder pedir solo los brutos de un proyecto.
+</details>
 
 
-## ¿Sabes algunos trucos?
+<details><summary><h2>¿Sabes algunos trucos?</h2></summary>
+
 - Fondo desenfocado para mostrar fotos = [Blanking fill effect](https://www.youtube.com/watch?v=nQ0hLKVw1ZU)
 - Shift ⇧ + Z = Zoom out al timeline entero
 - Amplía marcadores (pulsa "m") y haz secciones para organizarte mejor. Solo cambia el código de tiempo del marcador y los colores. Útil para vídeos largos con muchos temas
 - Aprende shortcuts como: las teclas **I** y **O** para marcar In & Out points en los clips. **J K** y **L** para el playback...
+
+</details>

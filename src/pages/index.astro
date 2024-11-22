@@ -67,21 +67,33 @@ const allExperiments = await getCollection("experiments");
         margin-top: 10px;
         cursor: pointer;
         opacity: 0.3; /* Default opacity for inactive tabs */
-        transition: all 0.25s;
+        position: relative; /* Required for the ::after pseudo-element */
+        transition: opacity 0.25s ease;
+        user-select: none; /* Prevent text selection */
     }
 
-    .tab-label:hover {
-        color: #fff;
-        text-decoration: underline;
-        text-underline-offset: 8px;
-        transition: 0.25s;
+    .tab-label::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Position just below the text */
+        left: 0;
+        width: 0; /* Hidden by default */
+        height: 2px; /* Thickness of the underline */
+        background-color: currentColor; /* Matches the text color */
+        transition: width 0.3s ease;
     }
 
-    /* Active tab opacity */
+    .tab-label:hover::after {
+        width: 100%; /* Expand the underline on hover */
+    }
+
+    /* Active tab opacity and underline */
     .tab-switch:checked + .tab-label {
         opacity: 1; /* Full opacity for the active tab */
-        text-decoration: underline;
-        text-underline-offset: 8px;
+    }
+
+    .tab-switch:checked + .tab-label::after {
+        width: 100%; /* Keep the underline visible for the active tab */
     }
 
     .tab-content {
