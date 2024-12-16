@@ -9,7 +9,20 @@ const allExperiments = await getCollection("experiments");
 
 <Main title="castro">
     <body class="text-white">
-        <div class="text-center flex justify-center text-2xl font-semibold mt-20 element animated-text">[ ]</div>
+        <div class="text-center flex justify-center text-2xl font-semibold mt-20 element animated-text">        <svg class="logo" width="40px" height="40px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+        <g clip-path="url(#_clip1)">
+        <g transform="matrix(1.3568,0,0,1.3568,-401.706,-1020.24)">
+            <g>
+                <g transform="matrix(1,0,0,1,-378.36,190.932)">
+                    <path d="M741.7,616.6C739.864,605.128 745.492,593.751 755.725,588.249C791.059,570.009 875.724,536.917 956.594,587.149C965.341,592.585 970.27,602.492 969.331,612.747C965.288,657.694 953.585,785.457 949.851,826.22C949.217,833.144 954.256,839.295 961.169,840.036C970.739,840.96 982.108,842.203 987.552,843.344C1003.27,846.637 1014.65,849.691 1021.42,860.359C1037.67,885.977 1030.39,941.417 961.963,938.058C961.378,938.028 960.794,937.973 960.214,937.891C954.199,936.908 914.594,929.272 868.039,891.831C868.039,891.831 824.978,858.707 791.542,847.635C783.201,844.903 777.087,837.738 775.7,829.071C768.782,785.867 749.18,663.352 741.7,616.6Z" style="fill:white;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-378.36,201.728)">
+                    <path d="M843.243,900.762C844.157,900.816 845.003,900.28 845.344,899.431C845.686,898.582 845.446,897.609 844.749,897.016C827.414,882.747 759.384,837.668 712.16,860.53C693.138,869.738 692.804,902.249 710.162,923.898C716.007,931.187 727.133,930.055 774.997,910.408C794.574,902.373 811.156,898.569 843.243,900.762Z" style="fill:white;"/>
+                </g>
+            </g>
+        </g>
+        </g>
+        </svg></div>
         <div class="container">
             <div class="tabs relative text-center">
                 <!-- Tab Menu -->
@@ -53,8 +66,7 @@ const allExperiments = await getCollection("experiments");
     .tab-label {
         font-size: 21px;
         display: inline-block;
-        margin-left: 8px;
-        margin-right: 40px;
+        margin-left: 60px;
         margin-bottom: 30px;
         margin-top: 10px;
         cursor: pointer;
