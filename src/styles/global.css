@@ -1,7 +1,7 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  --flexoki-black: #242422;
+  --flexoki-black: #0a100d;
   --flexoki-paper: #f8f9fa;
   --flexoki-text: #e9ecef;
 
@@ -63,15 +63,11 @@
 
 body {
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.7;
   background-color: var(--flexoki-black);
   color: var(--flexoki-paper);
   letter-spacing: 0.0225em;
-}
-
-.scrollable-element {
-  scrollbar-color: light;
 }
 
 h1 {
@@ -83,8 +79,8 @@ h1 {
 
 h2 {
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 26px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
@@ -172,7 +168,7 @@ h6 {
 }
 
 b {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 a {
@@ -263,7 +259,7 @@ hr {
 
 @media (max-width: 720px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   main {
@@ -333,7 +329,7 @@ hr {
 }
 
 .prose h2 {
-  font-weight: black;
+  font-weight: 600;
 }
 
 .prose li > a {

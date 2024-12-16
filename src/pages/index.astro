@@ -9,8 +9,9 @@ const allExperiments = await getCollection("experiments");
 
 <Main title="castro">
     <body class="text-white">
+        <div class="text-center flex justify-center text-2xl font-semibold mt-20 element animated-text">[ ]</div>
         <div class="container">
-            <div class="tabs relative">
+            <div class="tabs relative text-center">
                 <!-- Tab Menu -->
                 <input type="radio" name="tab" id="tab-1" checked class="tab-switch hidden">
                 <label for="tab-1" class="tab-label">Guías</label>
@@ -40,15 +41,6 @@ const allExperiments = await getCollection("experiments");
 </Main>
 
 <style>
-    /* Base styles */
-    body {
-        font-family: Schibsted Grotesk;
-        background: #242422;
-        color: #ecf0f1;
-        line-height: 1.5em;
-        margin: 0;
-    }
-
     .container {
         margin-top: 3em;
         gap: 5em; /* Adjusted gap for better spacing */
@@ -70,6 +62,7 @@ const allExperiments = await getCollection("experiments");
         position: relative; /* Required for the ::after pseudo-element */
         transition: opacity 0.25s ease;
         user-select: none; /* Prevent text selection */
+        font-weight: 600;
     }
 
     .tab-label::after {
@@ -104,7 +97,9 @@ const allExperiments = await getCollection("experiments");
         color: #fff;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
+        animation: fadeInUp 0.5s ease-in-out;
     }
+
 
     /* Show content for the selected tab */
     #tab-1:checked ~ .tab-content:nth-of-type(1),
@@ -118,4 +113,35 @@ const allExperiments = await getCollection("experiments");
     .article-card, .experiment-card {
         margin: 0.5rem 0;
     }
-</style>
+
+    /* Initial state: invisible and slightly scaled down */
+.animate-appearance {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When the element becomes visible */
+.animate-appearance.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* To trigger the animation on scroll */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px); /* Initial blur */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); /* No blur at the end */
+  }
+}
+
+.element {
+        animation: fadeInUp 0.8s ease-in-out;
+}
+   </style>

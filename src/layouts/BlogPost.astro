@@ -9,10 +9,10 @@ import "../styles/global.css";
     <Main title={frontmatter.title} description={frontmatter.description}>
         <main class="pb-72 pt-20">
             <div class="h-full w-full">
-                <div class="flex justify-between">
-                    <div>
-                        <div class="mb-3 font-extrabold text-4xl mx-2">{frontmatter.title}</div>
-                        <div class="mb-6 text-md font-extralight opacity-80 mx-2">
+                <div class="flex justify-center">
+                    <div class="text-center">
+                        <div class="mb-3 font-extrabold text-5xl">{frontmatter.title}</div>
+                        <div class="mb-6 text-xl font-extralight opacity-80">
                             <time class="opacity-75" datetime={frontmatter.pubDate.toISOString()}>
                                 {`${frontmatter.pubDate.getFullYear()} · ${frontmatter.pubDate.getMonth() + 1}`}
                             </time>
