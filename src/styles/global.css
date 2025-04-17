@@ -140,6 +140,22 @@ details > *:not(summary) {
   animation: expandContent 0.3s ease; /* Animación al expandir */
 }
 
+/* Add these styles to your existing CSS */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* For older versions of Safari */
+summary::-webkit-disclosure-closed-triangle,
+summary::-webkit-disclosure-open-triangle {
+  display: none;
+}
+
+/* Force Safari to use your custom marker */
+summary {
+  -webkit-appearance: none;
+}
+
 /* Animación para el contenido expandido */
 @keyframes expandContent {
   from {
