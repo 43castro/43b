@@ -85,59 +85,71 @@ h2 {
 }
 
 summary {
-  display: flex; /* Aligns the custom triangle and text horizontally */
-  align-items: center; /* Ensures vertical alignment */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 23px;
   cursor: pointer;
-  list-style: none; /* Prevents marker overlap issues */
+  list-style: none;
+  width: 100%;
+  margin-bottom: 0.8em;
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
 
-details[open] summary::before {
-  content: "▼"; /* Downward triangle for expanded state */
-  margin-right: 10px; /* Adds space between the triangle and text */
-  display: inline-block;
-  transition: transform 0.3s ease; /* Smooth animation */
+summary:hover {
 }
 
-summary::before {
-  content: "▶"; /* Rightward triangle for collapsed state */
-  font-size: 0.6em; /* Reduce the font size */
-  margin-right: 12px; /* Adjust right margin */
-  margin-bottom: 7px; /* Adjust bottom margin */
+summary::after {
+  content: "+";
+  font-size: 1em;
   display: inline-block;
-  transition: transform 0.3s ease; /* Smooth animation */
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  content: "+";
+  transform: rotate(45deg);
+}
+
+details[open] summary {
+  margin-bottom: 0.5em; /* Elimina el margen entre summary y el contenido */
+  border-bottom-left-radius: 0; /* Quita el redondeado en la parte inferior cuando está abierto */
+  border-bottom-right-radius: 0;
 }
 
 summary h2 {
-  user-select: none; /* Prevent text selection */
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  margin: 0;
 }
 
-summary h2 {
-  position: relative; /* Required for the pseudo-element positioning */
-  display: inline-block; /* Ensure the pseudo-element aligns correctly */
-}
-
+/* Quito el efecto de línea en hover */
 summary h2::after {
-  content: ""; /* Pseudo-element for the underline */
-  position: absolute;
-  bottom: 0; /* Position it at the bottom of the text */
-  left: 0;
-  width: 0; /* Initially hidden */
-  height: 2px; /* Thickness of the underline */
-  background-color: currentColor; /* Matches the text color */
-  transition: width 0.3s ease; /* Smooth animation */
-}
-
-/* Expand underline on hover */
-summary h2:hover::after,
-summary h2:focus::after, /* Keeps the underline when focused */
-details[open] summary h2::after {
-  /* Keeps the underline when <details> is open */
-  width: 100%; /* Expand underline */
+  margin-bottom: 2em;
+  content: none; /* Esto elimina la línea */
 }
 
 details[open] {
   margin-bottom: 2em;
+  padding-bottom: 15px; /* Espaciado interno en la parte inferior */
+}
+
+/* Estilo para el contenido interno de details */
+details > *:not(summary) {
+  animation: expandContent 0.3s ease; /* Animación al expandir */
+}
+
+/* Animación para el contenido expandido */
+@keyframes expandContent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h3 {
@@ -198,7 +210,7 @@ p {
 
 .prose p {
   font-family: "Schibsted Grotesk", sans-serif;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 textarea {
