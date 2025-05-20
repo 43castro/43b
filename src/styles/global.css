@@ -93,7 +93,7 @@ summary {
   list-style: none;
   width: 100%;
   margin-bottom: 0.8em;
-  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  transition: transform 0.2s ease-in-out; /* Transición suave para el color de fondo */
 }
 
 summary:hover {
