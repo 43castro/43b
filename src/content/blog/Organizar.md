@@ -16,7 +16,7 @@ El primer paso es en Finder. Utilizo mi programa [OrganizArt](https://castro.eus
 
 Luego, una vez que tengo mi árbol de archivos creado y automatizado, lo importo todo a DaVinci o Final Cut para organizar y clasificar mejor cada archivo.
 
-Mi mayor consejo es utilizar siempre [**palabras clave**](https://support.apple.com/es-es/guide/final-cut-pro/ver68416335/mac). Las ideas, no se conectan a través de estructuras de carpetas. Se buscan a través de palabras y frases que relacionan todos los archivos del proyecto. Un archivo puede pertenecer a varias categorías.
+Mi mayor consejo es utilizar siempre [palabras clave](https://support.apple.com/es-es/guide/final-cut-pro/ver68416335/mac). Las ideas, no se conectan a través de estructuras de carpetas. Se buscan a través de palabras y frases que relacionan todos los archivos del proyecto. Un archivo puede pertenecer a varias categorías.
 
 Aquí un ejemplo:
 

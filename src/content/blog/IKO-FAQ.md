@@ -8,14 +8,14 @@ tags: ["blog", "astro"]
 
 
 
-Esta guía pretende resolver dudas frecuentes y básicas sobre el ámbito audiovisual. Todo lo que explico a continuación tiene como base Da Vinci Resolve. Aunque muchas reglas se aplican a otros editores no-lineales como Premiere, Final Cut o Avid. Pero las funciones específicas que se mencionan igual pueden no tener equivalencia en otros programas. Si quieres saber más sobre [Final Cut](https://castro.eus/blog/fcpx/), tienes una guía también.
+> TL;DR Esta guía pretende resolver dudas frecuentes y básicas sobre el ámbito audiovisual. Todo lo que explico a continuación tiene como base Da Vinci Resolve. Aunque muchas reglas se aplican a otros editores no-lineales como Premiere, Final Cut o Avid. Pero las funciones específicas que se mencionan igual pueden no tener equivalencia en otros programas. Si quieres saber más sobre [Final Cut](https://castro.eus/blog/fcpx/), tienes una guía también.
 
 ## ¿Qué formato uso para mis discos duros?
 
 La manera en el que formateas tus discos es extremadamente importante. El sistema de archivos es algo con la que mucha gente se suele confundir y que luego causa problemas, bien por lentitud o compatibilidad. El resumen simple es:
 
-- Si **SOLO** usas macOS = [APFS](https://support.apple.com/es-es/guide/disk-utility/dsku19ed921c/mac) es el más rápido, pero macOS Extended Journaled funciona muy bien.
-- Si **SOLO** usas Windows = [NTFS](https://es.wikipedia.org/wiki/NTFS) es lo más rápido y sencillo.
+- Si **solo** usas macOS: [APFS](https://support.apple.com/es-es/guide/disk-utility/dsku19ed921c/mac) es el más rápido, pero macOS Extended Journaled funciona muy bien.
+- Si **solo** usas Windows: [NTFS](https://es.wikipedia.org/wiki/NTFS) es lo más rápido y sencillo.
 - Y si usas los dos sistemas todo el rato = usa exFAT.
 
 Un par de notas sobre [exFAT](https://learn.microsoft.com/en-gb/windows/win32/fileio/exfat-specification). Este sistema de archivos es más lento que los demás y no tiene funciones de seguridad (carece de [Journaling](https://es.wikipedia.org/wiki/Journaling)). Es más propenso a corrupción de archivos y Da Vinci siempre suele imprimir el aviso "exFAT drive detected". A veces no queda más remedio porque ciclamos mucho entre sistemas diferentes. Pero pudiéndolo evitar, es preferible usar sistemas de archivos más modernos y seguros.
@@ -63,30 +63,28 @@ La estructura general suele verse de la siguiente manera:
 Las **Power bins** se merecen su propia explicación. Son una serie de recursos que puedes acceder en múltiples proyectos contenidos, **una misma biblioteca**. Ej. Tu biblioteca de proyectos de vídeos para la empresa B, tiene disponibles en un Power bin: su logo, su música e imágenes corporativas. Esto evita que tengas que importar muchas veces los mismos recursos y los tengas organizados en un mismo sitio.
 
 Si quieres saber cómo organizar bien tus bibliotecas de Final Cut Pro, consulta [mi guía](https://castro.eus/blog/fcpx/) al respecto.
-</details>
 
 
-<details><summary><h2>¿Color Management? ¿LOG?</h2></summary>
+
+## ¿Color Management? ¿LOG?
 
 También tengo una guía sobre eso. Es densa, pero puedes leerlo [aquí](https://castro.eus/color)
 </details>
 
 
-<details><summary><h2>El ordenador va lento ¿Qué hago?</h2></summary>
+## El ordenador va lento ¿Qué hago?
 
 - Playback -> Render Cache -> User -> Líneas de tiempo pre-renderizadas. Mejor rendimiento y mejores tiempos de renderizado.
 - Haz proxies, versiones más pequeñas de archivos
-</details>
 
 
-<details><summary><h2>El ordenador va lento ¿Qué hago?</h2></summary>
+## El ordenador va lento ¿Qué hago?
 
 - Playback -> Render Cache -> User -> Líneas de tiempo pre-renderizadas. Mejor rendimiento y mejores tiempos de renderizado.
 - Haz proxies, versiones más pequeñas de archivos
-</details>
 
 
-<details><summary><h2>¿Audio demasiado bajo o alto? ¿Qué hago?</h2></summary>
+## ¿Audio demasiado bajo o alto? ¿Qué hago?
 Tener un volumen consistente en tu máster final es muy importante. Aquí adjunto unos cuanto concepto y procedimientos para que el mix final del vídeo tenga sentido y se adecúe a los estándares finales de distribución de contenido en plataformas digitales.
 
 **dBFS** significa "[decibelios](https://es.wikipedia.org/wiki/Decibelio) a escala completa" ("decibels full scale"). Es una abreviatura utilizada para definir los niveles de amplitud en decibelios en sistemas digitales en relación con el máximo nivel disponible.
@@ -102,9 +100,8 @@ LFKS y LUFS son **sinónimos** = ‘LUFS’ (que se ajusta a los acuerdos de den
 **Normalizar**: ajustar los niveles del audio al target de volumen especificado.
 Para normalizar volumen y saber más sobre exportación, aquí adjunto otro vídeo de [Teams2Films](https://www.youtube.com/watch?v=nZJkcca7vJ4)
 Otro buen vídeo de [EposVox](https://www.youtube.com/watch?v=q-pcO9jqpZ4)
-</details>
 
-<details><summary><h2>¿WTF es un codec?</h2></summary>
+## ¿WTF es un codec?
 
 Un codec es la manera en que se codifican y descodifican archivos de vídeo o audio. Hay muchos tipos de codecs (Prores, DNxHR, H.264) y todos ellos pueden ir en contenedores diversos (.mp4, .mov, .mkv...).  Esta manera de codificar y descodificar puede variar tanto en compresión como en resolución y bitrate. Y, por tanto, ser más o menos útiles en depende qué procesos.
 
@@ -128,14 +125,12 @@ Si bien en un ámbito profesional lo óptimo sería guardar el proyecto entero t
 - PROYECTO MÁSTER SOLO VOZ EN OFF
 
 Con estas 5 variantes nos aseguramos que si hay que cambiar algo en el vídeo, tenemos las piezas esenciales del puzzle que no ocupan mucho espacio y que, a su vez, nos dejan hacer cambios significativos. He elegido estas versiones porque son las que suele pedir normalmente el cliente. Además de eso, el cliente **jamás** debería de poder pedir solo los brutos de un proyecto.
-</details>
 
 
-<details><summary><h2>¿Sabes algunos trucos?</h2></summary>
-
+## ¿Sabes algunos trucos?
 - Fondo desenfocado para mostrar fotos = [Blanking fill effect](https://www.youtube.com/watch?v=nQ0hLKVw1ZU)
 - Shift ⇧ + Z = Zoom out al timeline entero
 - Amplía marcadores (pulsa "m") y haz secciones para organizarte mejor. Solo cambia el código de tiempo del marcador y los colores. Útil para vídeos largos con muchos temas
 - Aprende shortcuts como: las teclas **I** y **O** para marcar In & Out points en los clips. **J K** y **L** para el playback...
 
-</details>
+

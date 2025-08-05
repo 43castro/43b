@@ -1,5 +1,5 @@
 ---
-title: '¿Por qué aprender herramientas?'
+title: 'Herramientas'
 description: 'Productividad de usuarios'
 pubDate: 2025-08-04
 image: ''
