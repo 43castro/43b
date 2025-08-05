@@ -10,7 +10,7 @@ tags: ["blog", "astro"]
 
 Esta guía pretende resolver dudas frecuentes y básicas sobre el ámbito audiovisual. Todo lo que explico a continuación tiene como base Da Vinci Resolve. Aunque muchas reglas se aplican a otros editores no-lineales como Premiere, Final Cut o Avid. Pero las funciones específicas que se mencionan igual pueden no tener equivalencia en otros programas. Si quieres saber más sobre [Final Cut](https://castro.eus/blog/fcpx/), tienes una guía también.
 
-<details><summary><h2>¿Qué formato uso para mis discos duros?</h2></summary>
+## ¿Qué formato uso para mis discos duros?
 
 La manera en el que formateas tus discos es extremadamente importante. El sistema de archivos es algo con la que mucha gente se suele confundir y que luego causa problemas, bien por lentitud o compatibilidad. El resumen simple es:
 
@@ -25,7 +25,7 @@ Incluyo a Linux porque igual hay alguien que edita en Da Vinci así. exFAT tambi
 Si buscas lo mejor, más óptimo y seguro sin ningún tipo de compromiso, un servidor con 3-4 discos en [RAID 5](https://es.wikipedia.org/wiki/RAID) con [ZFS](https://es.wikipedia.org/wiki/ZFS_%28sistema_de_archivos%29) es la mejor opción. ZFS es un sistema de archivos con maneras eficientes de conseguir redundancia y sin mucho sacrificio de velocidad. RAID 5 además nos permite perder hasta 1 disco por cada 4 y no perder ni un solo archivo.
 </details>
 
-<details><summary><h2>¿Copias de seguridad? ¿Qué hago?</h2></summary>
+## ¿Copias de seguridad? ¿Qué hago?
 
 Los backups son exactamente igual de importantes que los discos y formatos que usamos. La regla óptima sobre esto debería de ser el 3-2-1.
 
@@ -34,14 +34,13 @@ Los backups son exactamente igual de importantes que los discos y formatos que u
 - 1 medio de estos en otro sitio.
 
 No es obligatorio seguir este método al pie de la letra. Pero por lo menos tener un clon del disco en el que estés trabajando me parece lo más efectivo. En estos casos, sí que sí es extremadamente recomendable no usar exFAT para tus discos en los que quieras guardar copias de seguridad.
-</details>
 
-<details><summary><h2>Me organizo fatal, ¿Qué hago?</h2></summary>
+
+## Me organizo fatal, ¿Qué hago?
 
 Tengo una guía sobre eso. Léela [aquí](https://castro.eus/blog/organizar)
-</details>
 
-<details><summary><h2>¿Cómo organizo mis proyectos en Da Vinci?</h2></summary>
+## ¿Cómo organizo mis proyectos en Da Vinci?
 
 Da Vinci usa librerías de proyecto para organizar sus archivos. Como hemos visto antes en los formatos de discos, lo ideal es no cambiar el tipo de formato y trabajar, si se puede de un mismo sistema o de un servidor común para múltiples sistemas.
 

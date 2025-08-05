@@ -6,13 +6,12 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
-<details><summary><h2>Contexto</h2></summary>
+## Contexto
 
 Si llevas un rato en mi blog te habrás dado cuenta de que organizar es muy importante para mí. Tanto para editores veteranos como principiantes que acaban de probar el programa, me gustaría compartir esta guía de cómo organizo yo mis librerías de Final Cut Pro. Cómo no solo ordeno, sino también cómo administro el caché y los archivos extra que genera el programa.
 
-</details>
 
-<details><summary><h2>Organización</h2></summary>
+## Organización
 
 Final Cut Pro, utiliza librerías para organizar sus archivos. En este diagrama se muestra de manera bastante gráfica. Cada biblioteca debe tener mínimo un evento.
 Y dentro de cada evento guardamos clips y proyectos. Los clips pueden ordenarse no solo por nombre, sino también por palabra clave o colecciones inteligentes.
@@ -46,20 +45,14 @@ los atajos  `⌘ + ⌃ + 1`,  `⌘ + ⌃ + 2` ...  Para desactivar o activar pan
 - Si tienes escenas marcadas (como en un corto), [ordena las escenas](https://www.youtube.com/watch?v=X9OoZAlNkXo) con metadatos de la cámara o manualmente. Puedes introducir tú el número de toma y escena y luego renombrarlo automáticamente. Todo esto luego es visible en el índice de la línea de tiempo.
 - Utiliza [palabras clave](https://support.apple.com/es-es/guide/final-cut-pro/ver68416335/mac) para organizar tus clips
 
-</details>
-
-
-<details><summary><h2>Ajustes que cambiar</h2></summary>
+## Ajustes que cambiar
 
 Por defecto, FCPX copia los archivos dentro de la propia biblioteca. Duplicando así, todos los archivos importados. Si tenemos 10 GB de vídeo grabados, acabamos con 20 GB más los archivos renderizados. Es importante marcar la casilla "Dejar archivos en su posición" en el menú de ajustes. Ese ajuste se encuentra en preferencias de Final Cut Pro (⌘ +, ) y dentro del apartado "Importación".
 
 También está activado por defecto el renderizado en segundo plano. Si tienes un Mac con chip M1 o superior, puedes desactivar esta opción a no ser que estés editando archivos muy comprimidos que dificulten el proceso de edición.
 Es conveniente editar con archivos [Prores](https://support.apple.com/es-es/102207), a ser posible. O transcodificar u hacer proxies con [Compressor](https://www.apple.com/es/final-cut-pro/compressor/).
 
-</details>
-
-
-<details><summary><h2>Eliminar archivos caché</h2></summary>
+## Eliminar archivos caché
 
 Si hay bibliotecas en las que se nos ha olvidado cambiar los ajustes anteriores, esta es la manera de reclamar ese espacio usado.
 
@@ -82,4 +75,3 @@ A veces, aunque hayamos desactivado todo lo previo, se van acumulando archivos d
   - [Thomas Grove Carter - YouTube](https://www.youtube.com/@ThomasGroveCarter/videos)
   - [Final Cut Pro - Ecosistema - Apple (ES)](https://www.apple.com/es/final-cut-pro/resources/ecosystem/)
 
-</details>
