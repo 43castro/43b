@@ -6,7 +6,6 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
-## Contexto
 El color es primero una ciencia y después un arte. Cada cual puede tener su manera y su *look* de cómo quiere que se vean sus vídeos. Pero para llegar a esa versión final la base debe de ser buena. Aquí explicaré, como pueda, las bases que deberías de entender sobre color. Siento de antemano si hay alguna errata.
 Gran parte de esta guía se basa en este vídeo de [Teams2Film](https://www.youtube.com/watch?v=w0ubDSzEEYg).
 
