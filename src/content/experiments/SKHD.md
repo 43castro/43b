@@ -34,6 +34,7 @@ Dentro de la terminal, `CTRL + F` busca y abre mis carpetas de proyectos de prog
 GitHub repo + Wiki: [SKHD](https://github.com/koekeishiya/skhd)
 
 Config file example: 
+
 ```bash
 # Volume quick-switch toggle
 ctrl - e : SwitchAudioSource -s "EVO4"

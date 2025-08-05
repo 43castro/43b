@@ -93,27 +93,25 @@ a {
 code {
   font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   font-size: 0.875em;
-  background-color: #f5f5f5;
   padding: 0.125rem 0.25rem;
   border-radius: 3px;
   color: #c7254e;
 }
 
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
+/* Override background and appearance */
+pre.catppuccin-latte{
+  background-color: #ffffff !important; /* override Latte’s light gray */
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
   padding: 1rem;
-  margin: 1.5rem 0;
   overflow-x: auto;
-  line-height: 1.4;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  color: #333;
-  font-size: 0.875rem;
+/* Optional: Override token styles */
+pre.catppuccin-latte code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  line-height: 1.6;
+  color: #e0e0e0; /* force text color override if needed */
 }
 
 /* Lists */
@@ -203,15 +201,11 @@ code:contains("|") {
 }
 
 /* GitHub link styling */
-a[href*="github.com"] {
+#github {
   display: flex;
   gap: 5px;
   color: black;
   font-weight: 500;
-}
-
-a[href*="github.com"]:hover {
-  /* This selector was empty and is a good place for a hover effect */
 }
 
 /* Navigation (if present) */

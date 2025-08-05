@@ -7,11 +7,14 @@ const { experiments } = Astro.props;
 const { title, pubDate } = experiments.data;
 ---
 
-<a href={`/experiments/${experiments.slug}`} class="text-black font-bold py-2.5 px-4 transition ease-in-out delay-50  hover:cursor-pointer text-xl flex w-fit gap-4">
-    <time class="opacity-50 font-light" datetime={pubDate.toISOString()}>
-      {`${pubDate.getFullYear()} · ${pubDate.getMonth() + 1}`}
-    </time>
-    <span class="opacity-80 hover:opacity-100">
-      {title}
-    </span>
+<a
+  href={`/experiments/${experiments.slug}`}
+  class="text-black font-bold py-2.5 px-4 transition ease-in-out delay-50 hover:cursor-pointer text-xl gap-4
+         flex flex-col sm:flex-row w-full sm:w-fit">
+  <time class="opacity-50 font-light hidden sm:flex" datetime={pubDate.toISOString()}>
+    {`${pubDate.getFullYear()} · ${pubDate.getMonth() + 1}`}
+  </time>
+  <span class="opacity-80 hover:opacity-100">
+    {title}
+  </span>
 </a>
