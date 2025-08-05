@@ -6,8 +6,6 @@ image: ''
 tags: ["blog", "astro"]
 ---
 
-## Contexto
-
 Si llevas un rato en mi blog te habrás dado cuenta de que organizar es muy importante para mí. Tanto para editores veteranos como principiantes que acaban de probar el programa, me gustaría compartir esta guía de cómo organizo yo mis librerías de Final Cut Pro. Cómo no solo ordeno, sino también cómo administro el caché y los archivos extra que genera el programa.
 
 
