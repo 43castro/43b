@@ -8,6 +8,8 @@ tags: ["blog", "astro"]
 
 Una lista de recursos útiles para el ámbito audiovisual.
 
+> Esto es una lista de referencias activa. La iré actualizando con el tiempo. 
+
 ## Utilidades
 - [Coolors](https://coolors.co/) ⭐️
 - [Cobalt Tools](https://instances.cobalt.best/). La página de Cobalt se suele tirar bastante. La comunidad hostea sus propias instancias de Cobalt en sus dominios. Antes de usar una instancia, checkea que tenga un buen ratio de acierto (en verde) en la página de las instancias. 
@@ -15,12 +17,12 @@ Una lista de recursos útiles para el ámbito audiovisual.
 - [Goyo Voice Separator](https://goyo.app/)
 - [Adobe Podcast | AI audio recording and editing, all on the web](https://podcast.adobe.com/)
 ## Música y Efectos de Sonido
+- [Soundly - The Complete Sound Effect Platform](https://getsoundly.com/) ⭐️
 - [Musicbed - Music Licensing for Video, Film & Advertising](https://www.musicbed.com/) ⭐️
 - [Epidemic Sound - Royalty Free Music for Video Creators](https://www.epidemicsound.com/)
 - [wirebeats - Copyright Free Music for Free](https://www.wirebeats.com/)
 - [Artlist](https://artlist.io/) ⭐️
 - [Marmoset](https://www.marmosetmusic.com/)
-- [Soundly - The Complete Sound Effect Platform](https://getsoundly.com/) ⭐️
 - [BOOM Library - Professional Sound Effects - Royalty-Free](https://www.boomlibrary.com/)
 - [Adobe Audition Sound Effects](https://www.adobe.com/products/audition/offers/AdobeAuditionDLCSFX.html)
 ## Tipografías
